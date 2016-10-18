@@ -1,0 +1,38 @@
+# Map models to tables
+config.tx_extbase.persistence.classes {
+    BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Targetgroup {
+        mapping {
+            tableName = tx_bzgaberatungsstellensuche_domain_model_targetgroup
+        }
+    }
+
+    BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Measure {
+        mapping {
+            tableName = tx_bzgaberatungsstellensuche_domain_model_measure
+        }
+    }
+
+    BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Expert {
+        mapping {
+            tableName = tx_bzgaberatungsstellensuche_domain_model_expert
+        }
+    }
+
+    BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Qualification {
+        mapping {
+            tableName = tx_bzgaberatungsstellensuche_domain_model_qualification
+        }
+    }
+
+    BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Type {
+        mapping {
+            tableName = tx_bzgaberatungsstellensuche_domain_model_type
+        }
+    }
+
+    BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Category {
+        mapping {
+            tableName = tx_bzgaberatungsstellensuche_domain_model_category_extended
+        }
+    }
+}

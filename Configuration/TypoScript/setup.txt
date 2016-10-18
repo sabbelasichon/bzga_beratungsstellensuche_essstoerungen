@@ -1,0 +1,20 @@
+plugin.tx_bzgaberatungsstellensuche {
+    view {
+        templateRootPaths {
+            10 = {$plugin.tx_bzgaberatungsstellensucheessstoerungen.view.templateRootPath}
+        }
+
+        partialRootPaths {
+            10 = {$plugin.tx_bzgaberatungsstellensucheessstoerungen.view.partialRootPath}
+        }
+
+        layoutRootPaths {
+            10 = {$plugin.tx_bzgaberatungsstellensucheessstoerungen.view.layoutRootPath}
+        }
+    }
+
+    # Modify the translation
+    _LOCAL_LANG {
+    }
+}
+

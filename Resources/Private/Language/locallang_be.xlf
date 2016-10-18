@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2016-08-14T12:41:03Z"
+          product-name="bzga_beratungsstellensuche_essstoerungen">
+        <header/>
+        <body>
+            <trans-unit id="flexforms_additional.formFields.targetgroups" xml:space="preserve">
+                <source>Zielgruppen</source>
+            </trans-unit>
+            <trans-unit id="flexforms_additional.formFields.categories_extended" xml:space="preserve">
+                <source>Beratungsarten - Essstörungen</source>
+            </trans-unit>
+            <trans-unit id="flexforms_additional.formFields.foreign_language" xml:space="preserve">
+                <source>Fremdsprachige Beratung</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

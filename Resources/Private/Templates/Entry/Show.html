@@ -1,0 +1,68 @@
+{namespace bzga=BZgA\BzgaBeratungsstellensuche\ViewHelpers}
+
+<f:layout name="Default"/>
+
+<f:section name="main">
+    <bzga:title>{entry.title}</bzga:title>
+    <f:if condition="{settings.backPid}">
+        <div class="divider-box">
+            <f:link.page pageUid="{settings.backPid}" class="btn btn-default"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <bzga:translate key="back" /></f:link.page>
+        </div>
+    </f:if>
+    <h1>{entry.title}</h1>
+    <f:if condition="{entry.subtitle}">
+        <span class="text-muted">{entry.subtitle}</span><br>
+    </f:if>
+    <f:if condition="{entry.teaser}">
+        <p>
+            <f:format.nl2br>{entry.teaser}</f:format.nl2br>
+        </p>
+    </f:if>
+    <f:if condition="{entry.image}">
+        <f:then>
+            <div class="media">
+                <div class="media-left">
+                    <f:image class="media-object" image="{entry.image}"/>
+                </div>
+                <div class="media-body">
+                    <f:render partial="Entry/Address" arguments="{_all}"/>
+                </div>
+            </div>
+        </f:then>
+        <f:else>
+            <f:render partial="Entry/Address" arguments="{_all}"/>
+        </f:else>
+    </f:if>
+    <hr />
+    <f:if condition="{entry.notice}">
+        <f:format.html>{entry.notice}</f:format.html>
+        <hr />
+    </f:if>
+    <f:if condition="{entry.description}">
+        <h3><bzga:translate key="description" /></h3>
+        <f:format.html>{entry.description}</f:format.html>
+        <hr />
+    </f:if>
+    <f:if condition="{entry.allCategoriesExtended}">
+        <h3><bzga:translate key="categories" /></h3>
+        <bzga:implode glue=", ">{entry.allCategoriesExtended}</bzga:implode>
+        <hr />
+    </f:if>
+    <f:if condition="{entry.allTargetgroups}">
+        <h3><bzga:translate key="targetgroups" /></h3>
+        <bzga:implode glue=", ">{entry.allTargetgroups}</bzga:implode>
+        <hr />
+    </f:if>
+    <f:if condition="{entry.allMeasures}">
+        <h3><bzga:translate key="measures" /></h3>
+        <bzga:implode glue=", ">{entry.allMeasures}</bzga:implode>
+        <hr />
+    </f:if>
+    <f:if condition="{entry.allLanguages}">
+        <h3><bzga:translate key="languages" /></h3>
+        <bzga:implode glue=", ">{entry.allLanguages}</bzga:implode>
+        <hr />
+    </f:if>
+    <bzga:widget.route entry="{entry}" />
+    <bzga:widget.map demand="{demand}" entry="{entry}" settings="{settings}"/>
+</f:section>

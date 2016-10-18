@@ -1,0 +1,10 @@
+plugin.tx_bzgaberatungsstellensucheessstoerungen {
+    view {
+        # cat=plugin.tx_bzgaberatungsstellensucheessstoerungen/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:bzga_beratungsstellensuche_essstoerungen/Resources/Private/Templates/
+        # cat=plugin.tx_bzgaberatungsstellensucheessstoerungen/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:bzga_beratungsstellensuche_essstoerungen/Resources/Private/Partials/
+        # cat=plugin.tx_bzgaberatungsstellensucheessstoerungen/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:bzga_beratungsstellensuche_essstoerungen/Resources/Private/Layouts/
+    }
+}
