@@ -1,11 +1,28 @@
 <?php
 
-
 namespace BZgA\BzgaBeratungsstellensucheEssstoerungen\Hooks;
+
+/**
+ * This file is part of the TYPO3 CMS project.
+ *
+ * It is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License, either version 2
+ * of the License, or any later version.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE.txt file that was distributed with this source code.
+ *
+ * The TYPO3 project - inspiring people to share!
+ */
 
 use BZgA\BzgaBeratungsstellensuche\Domain\Model\Dto\Demand;
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 
+/**
+ * @package TYPO3
+ * @subpackage bzga_beratungsstellensuche_essstoerungen
+ * @author Sebastian Schreiber
+ */
 class EntryRepository
 {
 
@@ -58,39 +75,6 @@ class EntryRepository
                 $constraints[] = $query->logicalOr($foreignLanguageConstraints);
             }
         }
-
-        /*if ($demand->getMeasures() && $demand->getMeasures()->count() > 0) {
-            $measuresContraints = array();
-            foreach ($demand->getMeasures() as $measure) {
-                $measuresContraints[] = $query->contains('measures', $measure);
-            }
-            if (!empty($measuresContraints)) {
-                $constraints[] = $query->logicalOr($measuresContraints);
-            }
-        }*/
-        // Constraints for Measures
-
-        // Constraints for Qualifications
-        /*if ($demand->getQualifications() && $demand->getQualifications()->count() > 0) {
-            $qualificationsConstraints = array();
-            foreach ($demand->getQualifications() as $qualification) {
-                $qualificationsConstraints[] = $query->contains('qualifications', $qualification);
-            }
-            if (!empty($qualificationsConstraints)) {
-                $constraints[] = $query->logicalOr($qualificationsConstraints);
-            }
-        }*/
-        // Constraints for Experts
-        /*if ($demand->getExperts() && $demand->getExperts()->count() > 0) {
-            $expertsConstraints = array();
-            foreach ($demand->getExperts() as $expert) {
-                $expertsConstraints[] = $query->contains('experts', $expert);
-            }
-            if (!empty($expertsConstraints)) {
-                $constraints[] = $query->logicalOr($expertsConstraints);
-            }
-        }*/
-
     }
 
 }

@@ -56,13 +56,6 @@ $signalSlotDispatcher->connect(
     'initializeAction'
 );
 
-// Additional Normalizers
-$signalSlotDispatcher->connect(
-    \BZgA\BzgaBeratungsstellensuche\Domain\Serializer\Serializer::class,
-    \BZgA\BzgaBeratungsstellensuche\Events::ADDITIONAL_NORMALIZERS_SIGNAL,
-    \BZgA\BzgaBeratungsstellensucheEssstoerungen\Slots\Serializer::class,
-    'additionalNormalizers'
-);
 
 // Extend the demand query
 $GLOBALS['TYPO3_CONF_VARS']['EXT']['bzga_beratungsstellensuche']['Domain/Repository/EntryRepository.php']['findDemanded'][]

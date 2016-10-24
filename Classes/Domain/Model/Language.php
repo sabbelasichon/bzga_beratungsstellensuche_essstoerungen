@@ -21,7 +21,7 @@ use BZgA\BzgaBeratungsstellensuche\Domain\Model\ExternalIdInterface;
 
 /**
  * @package TYPO3
- * @subpackage bzga_beratungsstellensuche
+ * @subpackage bzga_beratungsstellensuche_essstoerungen
  * @author Sebastian Schreiber
  */
 class Language extends AbstractEntity implements ExternalIdInterface

@@ -2,7 +2,24 @@
 
 namespace BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model;
 
+/**
+ * This file is part of the TYPO3 CMS project.
+ *
+ * It is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License, either version 2
+ * of the License, or any later version.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE.txt file that was distributed with this source code.
+ *
+ * The TYPO3 project - inspiring people to share!
+ */
 
+/**
+ * @package TYPO3
+ * @subpackage bzga_beratungsstellensuche_essstoerungen
+ * @author Sebastian Schreiber
+ */
 class Entry extends \BZgA\BzgaBeratungsstellensuche\Domain\Model\Entry
 {
 
@@ -263,7 +280,11 @@ class Entry extends \BZgA\BzgaBeratungsstellensuche\Domain\Model\Entry
     public function getAllMeasures()
     {
         if (null === $this->allMeasures) {
-            $this->allMeasures = $this->measures->toArray();
+            if ($this->measures instanceof \TYPO3\CMS\Extbase\Persistence\ObjectStorage) {
+                $this->allMeasures = $this->measures->toArray();
+            } else {
+                $this->allMeasures = array();
+            }
             if (!empty($this->measureOther)) {
                 $this->allMeasures[] = $this->measureOther;
             }
@@ -278,7 +299,11 @@ class Entry extends \BZgA\BzgaBeratungsstellensuche\Domain\Model\Entry
     public function getAllTargetgroups()
     {
         if (null === $this->allTargetgroups) {
-            $this->allTargetgroups = $this->targetgroups->toArray();
+            if ($this->targetgroups instanceof \TYPO3\CMS\Extbase\Persistence\ObjectStorage) {
+                $this->allTargetgroups = $this->targetgroups->toArray();
+            } else {
+                $this->allTargetgroups = array();
+            }
             if (!empty($this->targetgroupOther)) {
                 $this->allTargetgroups[] = $this->targetgroupOther;
             }
@@ -293,7 +318,11 @@ class Entry extends \BZgA\BzgaBeratungsstellensuche\Domain\Model\Entry
     public function getAllCategoriesExtended()
     {
         if (null === $this->allCategoriesExtended) {
-            $this->allCategoriesExtended = $this->categoriesExtended->toArray();
+            if ($this->categoriesExtended instanceof \TYPO3\CMS\Extbase\Persistence\ObjectStorage) {
+                $this->allCategoriesExtended = $this->categoriesExtended->toArray();
+            } else {
+                $this->allCategoriesExtended = array();
+            }
             if (!empty($this->categoryExtendedOther)) {
                 $this->allCategoriesExtended[] = $this->categoryExtendedOther;
             }
@@ -308,7 +337,11 @@ class Entry extends \BZgA\BzgaBeratungsstellensuche\Domain\Model\Entry
     public function getAllLanguages()
     {
         if (null === $this->allLanguages) {
-            $this->allLanguages = $this->languages->toArray();
+            if ($this->languages instanceof \TYPO3\CMS\Extbase\Persistence\ObjectStorage) {
+                $this->allLanguages = $this->languages->toArray();
+            } else {
+                $this->allLanguages = array();
+            }
             if (!empty($this->languageOther)) {
                 $this->allLanguages[] = $this->languageOther;
             }
