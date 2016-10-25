@@ -24,5 +24,8 @@ use BZgA\BzgaBeratungsstellensuche\Domain\Repository\AbstractBaseRepository;
  */
 class TypeRepository extends AbstractBaseRepository
 {
-
+    /**
+     * @var string
+     */
+    const TABLE = 'tx_bzgaberatungsstellensuche_domain_model_type';
 }

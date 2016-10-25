@@ -24,5 +24,13 @@ use BZgA\BzgaBeratungsstellensuche\Domain\Repository\AbstractBaseRepository;
  */
 class QualificationRepository extends AbstractBaseRepository
 {
+    /**
+     * @var string
+     */
+    const TABLE = 'tx_bzgaberatungsstellensuche_domain_model_qualification';
 
+    /**
+     * @var string
+     */
+    const MM_TABLE = 'tx_bzgaberatungsstellensuche_entry_qualification_mm';
 }

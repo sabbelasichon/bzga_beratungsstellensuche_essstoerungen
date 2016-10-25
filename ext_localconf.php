@@ -56,6 +56,13 @@ $signalSlotDispatcher->connect(
     'initializeAction'
 );
 
+$signalSlotDispatcher->connect(
+    \BZgA\BzgaBeratungsstellensuche\Domain\Repository\EntryRepository::class,
+    \BZgA\BzgaBeratungsstellensuche\Events::TABLE_TRUNCATE_ALL_SIGNAL,
+    \BZgA\BzgaBeratungsstellensucheEssstoerungen\Slots\EntryRepository::class,
+    'truncate'
+);
+
 
 // Extend the demand query
 $GLOBALS['TYPO3_CONF_VARS']['EXT']['bzga_beratungsstellensuche']['Domain/Repository/EntryRepository.php']['findDemanded'][]

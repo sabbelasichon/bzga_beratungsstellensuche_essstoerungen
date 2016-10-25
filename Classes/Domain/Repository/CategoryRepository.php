@@ -25,4 +25,15 @@ use BZgA\BzgaBeratungsstellensuche\Domain\Repository\AbstractBaseRepository;
 class CategoryRepository extends AbstractBaseRepository
 {
 
+    /**
+     * @var string
+     */
+    const TABLE = 'tx_bzgaberatungsstellensuche_domain_model_category_extended';
+
+    /**
+     * @var string
+     */
+    const MM_TABLE = 'tx_bzgaberatungsstellensuche_entry_category_extended_mm';
+
+
 }

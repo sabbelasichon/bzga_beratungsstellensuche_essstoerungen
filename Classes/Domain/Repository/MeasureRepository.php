@@ -25,4 +25,14 @@ use BZgA\BzgaBeratungsstellensuche\Domain\Repository\AbstractBaseRepository;
 class MeasureRepository extends AbstractBaseRepository
 {
 
+    /**
+     * @var string
+     */
+    const TABLE = 'tx_bzgaberatungsstellensuche_domain_model_measure';
+
+    /**
+     * @var string
+     */
+    const MM_TABLE = 'tx_bzgaberatungsstellensuche_entry_measure_mm';
+
 }
