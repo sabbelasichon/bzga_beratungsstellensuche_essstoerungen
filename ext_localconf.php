@@ -13,7 +13,7 @@ $signalSlotDispatcher = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TY
 // Extend name converter
 $signalSlotDispatcher->connect(
     \BZgA\BzgaBeratungsstellensuche\Domain\Serializer\NameConverter\EntryNameConverter::class,
-    \BZgA\BzgaBeratungsstellensuche\Events::SIGNAL_MapNames,
+    \BZgA\BzgaBeratungsstellensuche\Events::SIGNAL_MAP_NAMES,
     \BZgA\BzgaBeratungsstellensucheEssstoerungen\Slots\EntryNameConverter::class,
     'mapNames'
 );

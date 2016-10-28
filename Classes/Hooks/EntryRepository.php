@@ -15,7 +15,8 @@ namespace BZgA\BzgaBeratungsstellensucheEssstoerungen\Hooks;
  * The TYPO3 project - inspiring people to share!
  */
 
-use BZgA\BzgaBeratungsstellensuche\Domain\Model\Dto\Demand;
+use BZgA\BzgaBeratungsstellensuche\Domain\Model\Dto\Demand as BaseDemand;
+use BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Dto\Demand;
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 
 /**
@@ -34,16 +35,21 @@ class EntryRepository
      */
     public function modify(array $params)
     {
-        if (get_class($params['demand']) !== Demand::class) {
+        $demand = isset($params['demand']) ? $params['demand'] : null;
+        /* @var $demand Demand|BaseDemand */
+
+        if (!$demand instanceof BaseDemand) {
             return;
         }
 
-        $query = $params['query'];
+        $query = isset($params['query']) ? $params['query'] : null;
         /* @var $query QueryInterface */
+        if (!$query instanceof QueryInterface) {
+            return;
+        }
+
         $constraints = &$params['constraints'];
         /* @var $constraints array */
-        $demand = $params['demand'];
-        /* @var $demand Demand */
 
         // Constraints for Targetgroups
         if ($demand->getTargetgroups() && $demand->getTargetgroups()->count() > 0) {
