@@ -337,10 +337,12 @@ class Entry extends \BZgA\BzgaBeratungsstellensuche\Domain\Model\Entry
     public function getAllLanguages()
     {
         if (null === $this->allLanguages) {
+            $this->allLanguages = array();
             if ($this->languages instanceof \TYPO3\CMS\Extbase\Persistence\ObjectStorage) {
-                $this->allLanguages = $this->languages->toArray();
-            } else {
-                $this->allLanguages = array();
+                foreach ($this->languages as $language) {
+                    /* @var $language \SJBR\StaticInfoTables\Domain\Model\Language */
+                    $this->allLanguages[] = $language->getNameLocalized();
+                }
             }
             if (!empty($this->languageOther)) {
                 $this->allLanguages[] = $this->languageOther;

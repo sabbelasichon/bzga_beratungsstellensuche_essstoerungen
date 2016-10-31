@@ -7,4 +7,9 @@ plugin.tx_bzgaberatungsstellensucheessstoerungen {
         # cat=plugin.tx_bzgaberatungsstellensucheessstoerungen/file; type=string; label=Path to template layouts (FE)
         layoutRootPath = EXT:bzga_beratungsstellensuche_essstoerungen/Resources/Private/Layouts/
     }
+    settings {
+        map {
+            apiKey = AIzaSyDQEuoodBkwaXWLnhwwEy2q4rpW03So6f0
+        }
+    }
 }
