@@ -25,7 +25,7 @@ return array(
         ),
         'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath(
                 'bzga_beratungsstellensuche_essstoerungen'
-            ).'Resources/Public/Icons/tx_bzgaberatungsstellensuche_domain_model_expert.gif',
+            ).'Resources/Public/Icons/tx_bzgaberatungsstellensuche_domain_model_expert.png',
         'searchFields' => 'title',
     ),
     'interface' => array(

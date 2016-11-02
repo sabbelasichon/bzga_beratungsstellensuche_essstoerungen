@@ -9,7 +9,7 @@ plugin.tx_bzgaberatungsstellensucheessstoerungen {
     }
     settings {
         map {
-            apiKey = AIzaSyDQEuoodBkwaXWLnhwwEy2q4rpW03So6f0
+            apiKey = AIzaSyCvBvizRtPp_LsM635WpTO3kv-ke80T_Ns
         }
     }
 }
