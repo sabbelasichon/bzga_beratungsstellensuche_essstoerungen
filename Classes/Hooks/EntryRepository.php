@@ -18,6 +18,8 @@ namespace BZgA\BzgaBeratungsstellensucheEssstoerungen\Hooks;
 use BZgA\BzgaBeratungsstellensuche\Domain\Model\Dto\Demand as BaseDemand;
 use BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Dto\Demand;
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
+use BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Category;
+use BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Targetgroup;
 
 /**
  * @package TYPO3
@@ -55,7 +57,9 @@ class EntryRepository
         if ($demand->getTargetgroups() && $demand->getTargetgroups()->count() > 0) {
             $targetgroupConstraints = array();
             foreach ($demand->getTargetgroups() as $targetgroup) {
-                $targetgroupConstraints[] = $query->contains('targetgroups', $targetgroup);
+                if ($targetgroup instanceof Targetgroup) {
+                    $targetgroupConstraints[] = $query->contains('targetgroups', $targetgroup);
+                }
             }
             if (!empty($targetgroupConstraints)) {
                 $constraints[] = $query->logicalOr($targetgroupConstraints);
@@ -66,7 +70,9 @@ class EntryRepository
         if ($demand->getCategoriesExtended() && $demand->getCategoriesExtended()->count() > 0) {
             $categoriesExtendedConstraints = array();
             foreach ($demand->getCategoriesExtended() as $categoryExtended) {
-                $categoriesExtendedConstraints[] = $query->contains('categoriesExtended', $categoryExtended);
+                if ($categoryExtended instanceof Category) {
+                    $categoriesExtendedConstraints[] = $query->contains('categoriesExtended', $categoryExtended);
+                }
             }
             if (!empty($categoriesExtendedConstraints)) {
                 $constraints[] = $query->logicalOr($categoriesExtendedConstraints);
