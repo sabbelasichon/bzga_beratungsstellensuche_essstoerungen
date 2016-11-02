@@ -1,4 +1,4 @@
-plugin.tx_bzgaberatungsstellensucheessstoerungen {
+plugin.tx_bzgaberatungsstellensuche {
     view {
         # cat=plugin.tx_bzgaberatungsstellensucheessstoerungen/file; type=string; label=Path to template root (FE)
         templateRootPath = EXT:bzga_beratungsstellensuche_essstoerungen/Resources/Private/Templates/
@@ -6,10 +6,5 @@ plugin.tx_bzgaberatungsstellensucheessstoerungen {
         partialRootPath = EXT:bzga_beratungsstellensuche_essstoerungen/Resources/Private/Partials/
         # cat=plugin.tx_bzgaberatungsstellensucheessstoerungen/file; type=string; label=Path to template layouts (FE)
         layoutRootPath = EXT:bzga_beratungsstellensuche_essstoerungen/Resources/Private/Layouts/
-    }
-    settings {
-        map {
-            apiKey = AIzaSyCvBvizRtPp_LsM635WpTO3kv-ke80T_Ns
-        }
     }
 }
