@@ -1,6 +1,6 @@
 <?php
 
-namespace BZgA\BzgaBeratungsstellensucheEssstoerungen\Slots;
+namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Slots;
 
 /**
  * This file is part of the TYPO3 CMS project.
@@ -26,13 +26,13 @@ class EntryController
 {
 
     /**
-     * @var \BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\TargetgroupRepository
+     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\TargetgroupRepository
      * @inject
      */
     protected $targetgroupRepository;
 
     /**
-     * @var \BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\CategoryRepository
+     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\CategoryRepository
      * @inject
      */
     protected $categoryRepository;

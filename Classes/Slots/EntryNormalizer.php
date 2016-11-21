@@ -1,6 +1,6 @@
 <?php
 
-namespace BZgA\BzgaBeratungsstellensucheEssstoerungen\Slots;
+namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Slots;
 
 /**
  * This file is part of the TYPO3 CMS project.
@@ -15,7 +15,7 @@ namespace BZgA\BzgaBeratungsstellensucheEssstoerungen\Slots;
  * The TYPO3 project - inspiring people to share!
  */
 
-use \BZgA\BzgaBeratungsstellensuche\Domain\Serializer\Normalizer\EntryNormalizer as BaseEntryNormalizer;
+use Bzga\BzgaBeratungsstellensuche\Domain\Serializer\Normalizer\EntryNormalizer as BaseEntryNormalizer;
 
 /**
  * @package TYPO3
@@ -26,31 +26,31 @@ class EntryNormalizer
 {
 
     /**
-     * @var \BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\TargetgroupRepository
+     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\TargetgroupRepository
      * @inject
      */
     protected $targetgroupRepository;
 
     /**
-     * @var \BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\MeasureRepository
+     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\MeasureRepository
      * @inject
      */
     protected $measureRepository;
 
     /**
-     * @var \BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\QualificationRepository
+     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\QualificationRepository
      * @inject
      */
     protected $qualificationRepository;
 
     /**
-     * @var \BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\ExpertRepository
+     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\ExpertRepository
      * @inject
      */
     protected $expertRepository;
 
     /**
-     * @var \BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\CategoryRepository
+     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\CategoryRepository
      * @inject
      */
     protected $categoryRepository;
@@ -62,7 +62,7 @@ class EntryNormalizer
     protected $languageRepository;
 
     /**
-     * @var \BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\TypeRepository
+     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\TypeRepository
      * @inject
      */
     protected $typeRepository;

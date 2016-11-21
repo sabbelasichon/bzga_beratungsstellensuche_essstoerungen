@@ -1,6 +1,6 @@
 <?php
 
-namespace BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model;
+namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model;
 
 /**
  * This file is part of the TYPO3 CMS project.
@@ -15,7 +15,7 @@ namespace BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model;
  * The TYPO3 project - inspiring people to share!
  */
 
-use BZgA\BzgaBeratungsstellensuche\Domain\Model\AbstractEntity;
+use Bzga\BzgaBeratungsstellensuche\Domain\Model\AbstractEntity;
 
 /**
  * @package TYPO3

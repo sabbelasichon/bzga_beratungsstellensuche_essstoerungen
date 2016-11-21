@@ -1,6 +1,6 @@
 <?php
 
-namespace BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager;
+namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager;
 
 /**
  * This file is part of the TYPO3 CMS project.
@@ -25,13 +25,13 @@ use Bzga\BzgaBeratungsstellensuche\Domain\Manager\AbstractManager;
 class ExpertManager extends AbstractManager
 {
     /**
-     * @var \BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\ExpertRepository
+     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\ExpertRepository
      * @inject
      */
     protected $repository;
 
     /**
-     * @return \BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\ExpertRepository
+     * @return \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\ExpertRepository
      */
     public function getRepository()
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace BZgA\BzgaBeratungsstellensucheEssstoerungen\Slots;
+namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Slots;
 
 /**
  * This file is part of the TYPO3 CMS project.
@@ -16,13 +16,13 @@ namespace BZgA\BzgaBeratungsstellensucheEssstoerungen\Slots;
  */
 
 use Bzga\BzgaBeratungsstellensuche\Service\Importer\XmlImporter;
-use BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Targetgroup;
-use BZgA\BzgaBeratungsstellensuche\Domain\Serializer\Serializer as BaseSerializer;
-use BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Measure;
-use BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Expert;
-use BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Qualification;
-use BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Type;
-use BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Category;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Targetgroup;
+use Bzga\BzgaBeratungsstellensuche\Domain\Serializer\Serializer as BaseSerializer;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Measure;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Expert;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Qualification;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Type;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Category;
 
 /**
  * @package TYPO3
@@ -33,37 +33,37 @@ class Importer
 {
 
     /**
-     * @var \BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager\TargetgroupManager
+     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager\TargetgroupManager
      * @inject
      */
     protected $targetgroupManager;
 
     /**
-     * @var \BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager\MeasureManager
+     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager\MeasureManager
      * @inject
      */
     protected $measureManager;
 
     /**
-     * @var \BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager\QualificationManager
+     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager\QualificationManager
      * @inject
      */
     protected $qualificationManager;
 
     /**
-     * @var \BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager\ExpertManager
+     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager\ExpertManager
      * @inject
      */
     protected $expertManager;
 
     /**
-     * @var \BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager\TypeManager
+     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager\TypeManager
      * @inject
      */
     protected $typeManager;
 
     /**
-     * @var \BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager\CategoryManager
+     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager\CategoryManager
      * @inject
      */
     protected $categoryExtendedManager;

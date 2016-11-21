@@ -1,6 +1,6 @@
 <?php
 
-namespace BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager;
+namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager;
 
 /**
  * This file is part of the TYPO3 CMS project.
@@ -26,13 +26,13 @@ class MeasureManager extends AbstractManager
 {
 
     /**
-     * @var \BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\MeasureRepository
+     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\MeasureRepository
      * @inject
      */
     protected $repository;
 
     /**
-     * @return \BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\MeasureRepository
+     * @return \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\MeasureRepository
      */
     public function getRepository()
     {

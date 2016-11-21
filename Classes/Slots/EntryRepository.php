@@ -1,14 +1,14 @@
 <?php
 
 
-namespace BZgA\BzgaBeratungsstellensucheEssstoerungen\Slots;
+namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Slots;
 
-use BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\CategoryRepository;
-use BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\TargetgroupRepository;
-use BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\MeasureRepository;
-use BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\ExpertRepository;
-use BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\TypeRepository;
-use BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\QualificationRepository;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\CategoryRepository;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\TargetgroupRepository;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\MeasureRepository;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\ExpertRepository;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\TypeRepository;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\QualificationRepository;
 use TYPO3\CMS\Core\Database\DatabaseConnection;
 
 class EntryRepository

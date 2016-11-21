@@ -1,6 +1,6 @@
 <?php
 
-namespace BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager;
+namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager;
 
 /**
  * This file is part of the TYPO3 CMS project.
@@ -26,13 +26,13 @@ class TargetgroupManager extends AbstractManager
 {
 
     /**
-     * @var \BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\TargetgroupRepository
+     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\TargetgroupRepository
      * @inject
      */
     protected $repository;
 
     /**
-     * @return \BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\TargetgroupRepository
+     * @return \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\TargetgroupRepository
      */
     public function getRepository()
     {

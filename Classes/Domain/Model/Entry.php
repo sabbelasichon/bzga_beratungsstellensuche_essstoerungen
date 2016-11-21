@@ -1,6 +1,6 @@
 <?php
 
-namespace BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model;
+namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model;
 
 /**
  * This file is part of the TYPO3 CMS project.
@@ -20,36 +20,41 @@ namespace BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model;
  * @subpackage bzga_beratungsstellensuche_essstoerungen
  * @author Sebastian Schreiber
  */
-class Entry extends \BZgA\BzgaBeratungsstellensuche\Domain\Model\Entry
+class Entry extends \Bzga\BzgaBeratungsstellensuche\Domain\Model\Entry
 {
 
     /**
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Targetgroup>
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Targetgroup>
+     * @lazy
      */
     protected $targetgroups;
 
     /**
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Measure>
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Measure>
+     * @lazy
      */
     protected $measures;
 
     /**
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Expert>
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Expert>
+     * @lazy
      */
     protected $experts;
 
     /**
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Qualification>
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Qualification>
+     * @lazy
      */
     protected $qualifications;
 
     /**
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Category>
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Category>
+     * @lazy
      */
     protected $categoriesExtended;
 
     /**
-     * @var \BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Type
+     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Type
      */
     protected $institutionType;
 

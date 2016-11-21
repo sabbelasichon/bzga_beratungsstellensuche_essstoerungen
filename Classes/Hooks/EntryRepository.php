@@ -1,6 +1,6 @@
 <?php
 
-namespace BZgA\BzgaBeratungsstellensucheEssstoerungen\Hooks;
+namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Hooks;
 
 /**
  * This file is part of the TYPO3 CMS project.
@@ -15,11 +15,11 @@ namespace BZgA\BzgaBeratungsstellensucheEssstoerungen\Hooks;
  * The TYPO3 project - inspiring people to share!
  */
 
-use BZgA\BzgaBeratungsstellensuche\Domain\Model\Dto\Demand as BaseDemand;
-use BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Dto\Demand;
+use Bzga\BzgaBeratungsstellensuche\Domain\Model\Dto\Demand as BaseDemand;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Dto\Demand;
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
-use BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Category;
-use BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Targetgroup;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Category;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Targetgroup;
 
 /**
  * @package TYPO3

@@ -1,6 +1,6 @@
 <?php
 
-namespace BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Dto;
+namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Dto;
 
 /**
  * This file is part of the TYPO3 CMS project.
@@ -20,16 +20,16 @@ namespace BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Dto;
  * @subpackage bzga_beratungsstellensuche_essstoerungen
  * @author Sebastian Schreiber
  */
-class Demand extends \BZgA\BzgaBeratungsstellensuche\Domain\Model\Dto\Demand
+class Demand extends \Bzga\BzgaBeratungsstellensuche\Domain\Model\Dto\Demand
 {
 
     /**
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Targetgroup>
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Targetgroup>
      */
     protected $targetgroups;
 
     /**
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Category>
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Category>
      */
     protected $categoriesExtended;
 

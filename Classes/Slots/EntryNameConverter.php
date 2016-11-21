@@ -1,6 +1,6 @@
 <?php
 
-namespace BZgA\BzgaBeratungsstellensucheEssstoerungen\Slots;
+namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Slots;
 
 /**
  * This file is part of the TYPO3 CMS project.

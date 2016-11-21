@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model;
+namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model;
 
 /**
  * This file is part of the TYPO3 CMS project.
@@ -17,7 +17,7 @@ namespace BZgA\BzgaBeratungsstellensucheEssstoerungen\Domain\Model;
  */
 
 use SJBR\StaticInfoTables\Domain\Model\AbstractEntity;
-use BZgA\BzgaBeratungsstellensuche\Domain\Model\ExternalIdInterface;
+use Bzga\BzgaBeratungsstellensuche\Domain\Model\ExternalIdInterface;
 
 /**
  * @package TYPO3
@@ -27,6 +27,6 @@ use BZgA\BzgaBeratungsstellensuche\Domain\Model\ExternalIdInterface;
 class Language extends AbstractEntity implements ExternalIdInterface
 {
 
-    use \BZgA\BzgaBeratungsstellensuche\Domain\Model\ExternalIdTrait;
+    use \Bzga\BzgaBeratungsstellensuche\Domain\Model\ExternalIdTrait;
 
 }
