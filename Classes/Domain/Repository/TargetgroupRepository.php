@@ -14,12 +14,9 @@ namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository;
  *
  * The TYPO3 project - inspiring people to share!
  */
-
 use Bzga\BzgaBeratungsstellensuche\Domain\Repository\AbstractBaseRepository;
 
 /**
- * @package TYPO3
- * @subpackage bzga_beratungsstellensuche_essstoerungen
  * @author Sebastian Schreiber
  */
 class TargetgroupRepository extends AbstractBaseRepository
@@ -33,5 +30,4 @@ class TargetgroupRepository extends AbstractBaseRepository
      * @var string
      */
     const MM_TABLE = 'tx_bzgaberatungsstellensuche_entry_targetgroup_mm';
-
 }

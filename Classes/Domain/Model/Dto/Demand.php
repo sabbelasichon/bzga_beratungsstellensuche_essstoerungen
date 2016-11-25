@@ -16,8 +16,6 @@ namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Dto;
  */
 
 /**
- * @package TYPO3
- * @subpackage bzga_beratungsstellensuche_essstoerungen
  * @author Sebastian Schreiber
  */
 class Demand extends \Bzga\BzgaBeratungsstellensuche\Domain\Model\Dto\Demand
@@ -34,7 +32,7 @@ class Demand extends \Bzga\BzgaBeratungsstellensuche\Domain\Model\Dto\Demand
     protected $categoriesExtended;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $foreignLanguage;
 
@@ -55,7 +53,7 @@ class Demand extends \Bzga\BzgaBeratungsstellensuche\Domain\Model\Dto\Demand
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isForeignLanguage()
     {
@@ -63,7 +61,7 @@ class Demand extends \Bzga\BzgaBeratungsstellensuche\Domain\Model\Dto\Demand
     }
 
     /**
-     * @param boolean $foreignLanguage
+     * @param bool $foreignLanguage
      */
     public function setForeignLanguage($foreignLanguage)
     {
@@ -85,5 +83,4 @@ class Demand extends \Bzga\BzgaBeratungsstellensuche\Domain\Model\Dto\Demand
     {
         $this->targetgroups = $targetgroups;
     }
-
 }

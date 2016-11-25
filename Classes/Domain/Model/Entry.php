@@ -16,8 +16,6 @@ namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model;
  */
 
 /**
- * @package TYPO3
- * @subpackage bzga_beratungsstellensuche_essstoerungen
  * @author Sebastian Schreiber
  */
 class Entry extends \Bzga\BzgaBeratungsstellensuche\Domain\Model\Entry
@@ -288,7 +286,7 @@ class Entry extends \Bzga\BzgaBeratungsstellensuche\Domain\Model\Entry
             if ($this->measures instanceof \TYPO3\CMS\Extbase\Persistence\ObjectStorage) {
                 $this->allMeasures = $this->measures->toArray();
             } else {
-                $this->allMeasures = array();
+                $this->allMeasures = [];
             }
             if (!empty($this->measureOther)) {
                 $this->allMeasures[] = $this->measureOther;
@@ -307,7 +305,7 @@ class Entry extends \Bzga\BzgaBeratungsstellensuche\Domain\Model\Entry
             if ($this->targetgroups instanceof \TYPO3\CMS\Extbase\Persistence\ObjectStorage) {
                 $this->allTargetgroups = $this->targetgroups->toArray();
             } else {
-                $this->allTargetgroups = array();
+                $this->allTargetgroups = [];
             }
             if (!empty($this->targetgroupOther)) {
                 $this->allTargetgroups[] = $this->targetgroupOther;
@@ -326,7 +324,7 @@ class Entry extends \Bzga\BzgaBeratungsstellensuche\Domain\Model\Entry
             if ($this->categoriesExtended instanceof \TYPO3\CMS\Extbase\Persistence\ObjectStorage) {
                 $this->allCategoriesExtended = $this->categoriesExtended->toArray();
             } else {
-                $this->allCategoriesExtended = array();
+                $this->allCategoriesExtended = [];
             }
             if (!empty($this->categoryExtendedOther)) {
                 $this->allCategoriesExtended[] = $this->categoryExtendedOther;
@@ -342,7 +340,7 @@ class Entry extends \Bzga\BzgaBeratungsstellensuche\Domain\Model\Entry
     public function getAllLanguages()
     {
         if (null === $this->allLanguages) {
-            $this->allLanguages = array();
+            $this->allLanguages = [];
             if ($this->languages instanceof \TYPO3\CMS\Extbase\Persistence\ObjectStorage) {
                 foreach ($this->languages as $language) {
                     /* @var $language \SJBR\StaticInfoTables\Domain\Model\Language */
@@ -356,5 +354,4 @@ class Entry extends \Bzga\BzgaBeratungsstellensuche\Domain\Model\Entry
 
         return $this->allLanguages;
     }
-
 }

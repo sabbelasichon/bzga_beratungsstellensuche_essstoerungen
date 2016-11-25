@@ -4,11 +4,11 @@
 namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Slots;
 
 use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\CategoryRepository;
-use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\TargetgroupRepository;
-use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\MeasureRepository;
 use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\ExpertRepository;
-use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\TypeRepository;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\MeasureRepository;
 use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\QualificationRepository;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\TargetgroupRepository;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\TypeRepository;
 use TYPO3\CMS\Core\Database\DatabaseConnection;
 
 class EntryRepository
@@ -37,5 +37,4 @@ class EntryRepository
         $databaseConnection->exec_TRUNCATEquery(QualificationRepository::MM_TABLE);
         $databaseConnection->exec_TRUNCATEquery(self::LANGUAGE_MM_TABLE);
     }
-
 }

@@ -14,12 +14,9 @@ namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository;
  *
  * The TYPO3 project - inspiring people to share!
  */
-
 use Bzga\BzgaBeratungsstellensuche\Domain\Repository\AbstractBaseRepository;
 
 /**
- * @package TYPO3
- * @subpackage bzga_beratungsstellensuche_essstoerungen
  * @author Sebastian Schreiber
  */
 class TypeRepository extends AbstractBaseRepository

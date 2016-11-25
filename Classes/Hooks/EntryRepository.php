@@ -14,16 +14,13 @@ namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Hooks;
  *
  * The TYPO3 project - inspiring people to share!
  */
-
 use Bzga\BzgaBeratungsstellensuche\Domain\Model\Dto\Demand as BaseDemand;
-use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Dto\Demand;
-use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Category;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Dto\Demand;
 use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Targetgroup;
+use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 
 /**
- * @package TYPO3
- * @subpackage bzga_beratungsstellensuche_essstoerungen
  * @author Sebastian Schreiber
  */
 class EntryRepository
@@ -55,7 +52,7 @@ class EntryRepository
 
         // Constraints for Targetgroups
         if ($demand->getTargetgroups() && $demand->getTargetgroups()->count() > 0) {
-            $targetgroupConstraints = array();
+            $targetgroupConstraints = [];
             foreach ($demand->getTargetgroups() as $targetgroup) {
                 if ($targetgroup instanceof Targetgroup) {
                     $targetgroupConstraints[] = $query->contains('targetgroups', $targetgroup);
@@ -68,7 +65,7 @@ class EntryRepository
 
         // Constraints for extended categories
         if ($demand->getCategoriesExtended() && $demand->getCategoriesExtended()->count() > 0) {
-            $categoriesExtendedConstraints = array();
+            $categoriesExtendedConstraints = [];
             foreach ($demand->getCategoriesExtended() as $categoryExtended) {
                 if ($categoryExtended instanceof Category) {
                     $categoriesExtendedConstraints[] = $query->contains('categoriesExtended', $categoryExtended);
@@ -80,7 +77,7 @@ class EntryRepository
         }
 
         if ($demand->isForeignLanguage()) {
-            $foreignLanguageConstraints = array();
+            $foreignLanguageConstraints = [];
             $foreignLanguageConstraints[] = $query->greaterThan('languages', 0);
             $foreignLanguageConstraints[] = $query->logicalNot($query->equals('languageOther', ''));
             if (!empty($foreignLanguageConstraints)) {
@@ -88,5 +85,4 @@ class EntryRepository
             }
         }
     }
-
 }

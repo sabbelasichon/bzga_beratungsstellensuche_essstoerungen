@@ -15,18 +15,14 @@ namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model;
  *
  * The TYPO3 project - inspiring people to share!
  */
-
-use SJBR\StaticInfoTables\Domain\Model\AbstractEntity;
 use Bzga\BzgaBeratungsstellensuche\Domain\Model\ExternalIdInterface;
+use SJBR\StaticInfoTables\Domain\Model\AbstractEntity;
 
 /**
- * @package TYPO3
- * @subpackage bzga_beratungsstellensuche_essstoerungen
  * @author Sebastian Schreiber
  */
 class Language extends AbstractEntity implements ExternalIdInterface
 {
 
     use \Bzga\BzgaBeratungsstellensuche\Domain\Model\ExternalIdTrait;
-
 }

@@ -14,12 +14,9 @@ namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Slots;
  *
  * The TYPO3 project - inspiring people to share!
  */
-
 use TYPO3\CMS\Extbase\Mvc\Controller\MvcPropertyMappingConfiguration;
 
 /**
- * @package TYPO3
- * @subpackage bzga_beratungsstellensuche_essstoerungen
  * @author Sebastian Schreiber
  */
 class EntryController
@@ -45,14 +42,14 @@ class EntryController
     {
         $targetgroups = $this->targetgroupRepository->findAll();
         $categoriesExtended = $this->categoryRepository->findAll();
-        $variables = array_merge($variables, array(
+        $variables = array_merge($variables, [
             'targetgroups' => $targetgroups,
             'categoriesExtended' => $categoriesExtended,
-        ));
+        ]);
 
-        return array(
+        return [
             'extendedVariables' => $variables,
-        );
+        ];
     }
 
     /**
@@ -60,7 +57,7 @@ class EntryController
      */
     public function initializeAction(MvcPropertyMappingConfiguration $propertyMappingConfiguration)
     {
-        $allowSubProperties = array('targetgroups', 'categoriesExtended');
+        $allowSubProperties = ['targetgroups', 'categoriesExtended'];
 
         foreach ($allowSubProperties as $allowSubProperty) {
             $propertyMappingConfiguration->forProperty($allowSubProperty)->allowAllProperties();
@@ -68,5 +65,4 @@ class EntryController
             $propertyMappingConfiguration->allowModificationForSubProperty($allowSubProperty);
         }
     }
-
 }

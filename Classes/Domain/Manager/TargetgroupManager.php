@@ -14,12 +14,9 @@ namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager;
  *
  * The TYPO3 project - inspiring people to share!
  */
-
 use Bzga\BzgaBeratungsstellensuche\Domain\Manager\AbstractManager;
 
 /**
- * @package TYPO3
- * @subpackage bzga_beratungsstellensuche_essstoerungen
  * @author Sebastian Schreiber
  */
 class TargetgroupManager extends AbstractManager
@@ -38,6 +35,4 @@ class TargetgroupManager extends AbstractManager
     {
         return $this->repository;
     }
-
-
 }

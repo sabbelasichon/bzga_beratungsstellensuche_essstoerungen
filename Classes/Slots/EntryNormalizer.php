@@ -14,12 +14,9 @@ namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Slots;
  *
  * The TYPO3 project - inspiring people to share!
  */
-
 use Bzga\BzgaBeratungsstellensuche\Domain\Serializer\Normalizer\EntryNormalizer as BaseEntryNormalizer;
 
 /**
- * @package TYPO3
- * @subpackage bzga_beratungsstellensuche_essstoerungen
  * @author Sebastian Schreiber
  */
 class EntryNormalizer
@@ -71,11 +68,9 @@ class EntryNormalizer
      * @param array $callbacks
      * @return array
      */
-    public function additionalCallbacks(array $callbacks = array())
+    public function additionalCallbacks(array $callbacks = [])
     {
-
-
-        $callbacks = array_merge($callbacks, array(
+        $callbacks = array_merge($callbacks, [
             'languages' => function () {
                 return BaseEntryNormalizer::convertToObjectStorage($this->languageRepository, func_get_args());
             },
@@ -97,11 +92,10 @@ class EntryNormalizer
             'categoriesExtended' => function () {
                 return BaseEntryNormalizer::convertToObjectStorage($this->categoryRepository, func_get_args());
             },
-        ));
+        ]);
 
-        return array(
+        return [
             'extendedCallbacks' => $callbacks,
-        );
+        ];
     }
-
 }

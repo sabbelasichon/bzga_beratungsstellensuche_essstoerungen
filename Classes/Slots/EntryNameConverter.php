@@ -16,8 +16,6 @@ namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Slots;
  */
 
 /**
- * @package TYPO3
- * @subpackage bzga_beratungsstellensuche_essstoerungen
  * @author Sebastian Schreiber
  */
 class EntryNameConverter
@@ -27,9 +25,9 @@ class EntryNameConverter
      * @param array $mapNames
      * @return array
      */
-    public function mapNames(array $mapNames = array())
+    public function mapNames(array $mapNames = [])
     {
-        $mapNames = array_merge($mapNames, array(
+        $mapNames = array_merge($mapNames, [
             'zielgruppe' => 'targetgroups',
             'massnahme' => 'measures',
             'fremdsprache' => 'languages',
@@ -39,10 +37,10 @@ class EntryNameConverter
             'beratungsart2_sons' => 'category_extended_other',
             'beratungsart2' => 'categories_extended',
             'einrichtungsart' => 'institution_type',
-        ));
+        ]);
 
-        return array(
+        return [
             'extendedMapNames' => $mapNames,
-        );
+        ];
     }
 }

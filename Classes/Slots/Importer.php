@@ -14,19 +14,16 @@ namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Slots;
  *
  * The TYPO3 project - inspiring people to share!
  */
-
-use Bzga\BzgaBeratungsstellensuche\Service\Importer\XmlImporter;
-use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Targetgroup;
 use Bzga\BzgaBeratungsstellensuche\Domain\Serializer\Serializer as BaseSerializer;
-use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Measure;
-use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Expert;
-use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Qualification;
-use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Type;
+use Bzga\BzgaBeratungsstellensuche\Service\Importer\XmlImporter;
 use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Category;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Expert;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Measure;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Qualification;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Targetgroup;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Type;
 
 /**
- * @package TYPO3
- * @subpackage bzga_beratungsstellensuche_essstoerungen
  * @author Sebastian Schreiber
  */
 class Importer
@@ -103,5 +100,4 @@ class Importer
         $this->categoryExtendedManager->persist();
         $this->typeManager->persist();
     }
-
 }
