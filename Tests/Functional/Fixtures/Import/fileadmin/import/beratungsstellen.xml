@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<beratungsstellen version="2.1">
+    <referat id='famplan'>Sexualaufklärung und Familienplanung</referat>
+    <entrys>
+        <entry>
+            <index>2619</index>
+            <titel>Titel der Beratungsstelle</titel>
+            <untertitel></untertitel>
+            <ansprechpartner>Max Mustermann</ansprechpartner>
+            <link>http://meine-domain.com.de/</link>
+            <kurztext>Ein kurzer Text steht hier</kurztext>
+            <plz>33333</plz>
+            <ort>Musterstadt</ort>
+            <bundesland>1</bundesland>
+            <strasse>Musterstraße 1</strasse>
+            <mapx>8.58175</mapx>
+            <mapy>48.77265</mapy>
+            <telefon>07051 924870</telefon>
+            <fax>07051 92487226</fax>
+            <email>max.mustermann@domain.com</email>
+            <traeger>Träger der Beratungsstelle</traeger>
+            <website>www.domain.de</website>
+            <beratertelefon>000000000</beratertelefon>
+            <hinweistext>Di.15.00h 16.00h</hinweistext>
+            <beratungsschein>1</beratungsschein>
+            <angebot><![CDATA[<p></p>]]></angebot>
+            <logo></logo>
+            <konfession>0</konfession>
+            <beratungsart2>
+                <index>1</index>
+                <index>2</index>
+                <index>3</index>
+                <index>4</index>
+                <index>6</index>
+            </beratungsart2>
+            <beratungsart2_sons></beratungsart2_sons>
+            <zielgruppe>
+                <index>1</index>
+                <index>2</index>
+                <index>3</index>
+                <index>6</index>
+                <index>8</index>
+            </zielgruppe>
+            <zielgruppe_sons></zielgruppe_sons>
+            <fremdsprache>
+                <index>1</index>
+            </fremdsprache>
+            <fremdsprache_sons></fremdsprache_sons>
+            <einrichtungsart></einrichtungsart>
+            <massnahme>
+                <index>1</index>
+                <index>2</index>
+                <index>3</index>
+                <index>4</index>
+                <index>6</index>
+                <index>7</index>
+                <index>8</index>
+                <index>9</index>
+                <index>10</index>
+                <index>11</index>
+            </massnahme>
+            <massnahme_sons></massnahme_sons>
+            <verband>Verband der Beratungsstelle</verband>
+            <kontaktform>0</kontaktform>
+            <kontaktemail>max.mustermann@domain.com</kontaktemail>
+            <suchcontent>Keywords, Schwangerschaft, Familienplanung</suchcontent>
+        </entry>
+    </entrys>
+    <konfessionen>
+        <konfession>
+            <index>1</index>
+            <sort>1</sort>evangelische Beratungsstellen
+        </konfession>
+        <konfession>
+            <index>2</index>
+            <sort>2</sort>katholische Beratungsstellen
+        </konfession>
+        <konfession>
+            <index>3</index>
+            <sort>3</sort>nicht konfessionelle Beratungsstellen
+        </konfession>
+    </konfessionen>
+    <beratungsarten>
+        <beratungsart>
+            <index>1</index>
+            <sort>2</sort>persönliche Beratung
+        </beratungsart>
+        <beratungsart>
+            <index>2</index>
+            <sort>3</sort>telefonische Beratung
+        </beratungsart>
+        <beratungsart>
+            <index>3</index>
+            <sort>1</sort>Online-Beratung
+        </beratungsart>
+    </beratungsarten>
+    <beratungsarten2>
+        <beratungsart2>
+            <index>1</index>
+            <sort>1</sort>Persönliche Beratung
+        </beratungsart2>
+        <beratungsart2>
+            <index>2</index>
+            <sort>2</sort>Einzelberatung
+        </beratungsart2>
+        <beratungsart2>
+            <index>3</index>
+            <sort>3</sort>Gruppenberatung
+        </beratungsart2>
+        <beratungsart2>
+            <index>4</index>
+            <sort>4</sort>Telefonische Beratung
+        </beratungsart2>
+        <beratungsart2>
+            <index>5</index>
+            <sort>5</sort>Internetberatung
+        </beratungsart2>
+        <beratungsart2>
+            <index>6</index>
+            <sort>6</sort>Beratung per E-Mail
+        </beratungsart2>
+        <beratungsart2>
+            <index>7</index>
+            <sort>7</sort>Chatroom (Echtzeit)
+        </beratungsart2>
+        <beratungsart2>
+            <index>8</index>
+            <sort>8</sort>Video-Beratung
+        </beratungsart2>
+        <beratungsart2>
+            <index>9</index>
+            <sort>9</sort>Sonstige Beratungsarten
+        </beratungsart2>
+    </beratungsarten2>
+    <zielgruppen>
+        <zielgruppe>
+            <index>1</index>
+            <sort>1</sort>Kinder und Jugendliche
+        </zielgruppe>
+        <zielgruppe>
+            <index>2</index>
+            <sort>2</sort>Erwachsene
+        </zielgruppe>
+        <zielgruppe>
+            <index>3</index>
+            <sort>3</sort>geschlechtsspezifische Angebote
+        </zielgruppe>
+        <zielgruppe>
+            <index>4</index>
+            <sort>4</sort>Mädchen/Frauen
+        </zielgruppe>
+        <zielgruppe>
+            <index>5</index>
+            <sort>5</sort>Jungen/Männer
+        </zielgruppe>
+        <zielgruppe>
+            <index>6</index>
+            <sort>6</sort>Eltern und Angehörige
+        </zielgruppe>
+        <zielgruppe>
+            <index>7</index>
+            <sort>7</sort>Multiplikatorinnen und Multiplikatoren
+        </zielgruppe>
+        <zielgruppe>
+            <index>8</index>
+            <sort>8</sort>sonstige Zielgruppen
+        </zielgruppe>
+    </zielgruppen>
+    <fremdsprachen>
+        <fremdsprache>
+            <index>1</index>
+            <sort>1</sort>Englisch
+        </fremdsprache>
+        <fremdsprache>
+            <index>2</index>
+            <sort>2</sort>Französisch
+        </fremdsprache>
+        <fremdsprache>
+            <index>3</index>
+            <sort>3</sort>Spanisch
+        </fremdsprache>
+        <fremdsprache>
+            <index>4</index>
+            <sort>4</sort>Türkisch
+        </fremdsprache>
+        <fremdsprache>
+            <index>5</index>
+            <sort>5</sort>Russisch
+        </fremdsprache>
+        <fremdsprache>
+            <index>6</index>
+            <sort>6</sort>Italienisch
+        </fremdsprache>
+        <fremdsprache>
+            <index>6</index>
+            <sort>7</sort>Sonstige Fremdsprachen
+        </fremdsprache>
+    </fremdsprachen>
+    <einrichtungsarten>
+        <einrichtungsart>
+            <index>1</index>
+            <sort>1</sort>Beratungsstelle ausschließlich zu Essstörungen
+        </einrichtungsart>
+        <einrichtungsart>
+            <index>2</index>
+            <sort>2</sort>Beratungseinrichtung mit einem essstörungsspezifischen Angebot neben anderen
+            Beratungsangeboten
+        </einrichtungsart>
+    </einrichtungsarten>
+    <massnahmen>
+        <massnahme>
+            <index>1</index>
+            <sort>1</sort>Klärung des Anliegens
+        </massnahme>
+        <massnahme>
+            <index>2</index>
+            <sort>2</sort>Vermittlung zur diagnostischen Abklärung
+        </massnahme>
+        <massnahme>
+            <index>3</index>
+            <sort>3</sort>Vermittlung in ambulante, teilstationäre, stationäre Therapieeinrichtungen
+        </massnahme>
+        <massnahme>
+            <index>4</index>
+            <sort>4</sort>Weitergabe von Anschriften von Behandlungseinrichtungen
+        </massnahme>
+        <massnahme>
+            <index>5</index>
+            <sort>5</sort>Weitergabe von Anschriften der Selbsthilfe
+        </massnahme>
+        <massnahme>
+            <index>6</index>
+            <sort>6</sort>Motivierende Begleitung
+        </massnahme>
+        <massnahme>
+            <index>7</index>
+            <sort>7</sort>Krisenintervention
+        </massnahme>
+        <massnahme>
+            <index>8</index>
+            <sort>8</sort>Nachbetreuung
+        </massnahme>
+        <massnahme>
+            <index>9</index>
+            <sort>9</sort>Fortbildung für Fachkräfte
+        </massnahme>
+        <massnahme>
+            <index>10</index>
+            <sort>10</sort>Selbsthilfe
+        </massnahme>
+        <massnahme>
+            <index>11</index>
+            <sort>11</sort>Prävention
+        </massnahme>
+        <massnahme>
+            <index>12</index>
+            <sort>12</sort>Wohngruppen
+        </massnahme>
+        <massnahme>
+            <index>13</index>
+            <sort>13</sort>Sonstige Maßnahmen
+        </massnahme>
+    </massnahmen>
+
+</beratungsstellen>
