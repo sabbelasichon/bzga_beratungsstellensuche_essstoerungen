@@ -3,5 +3,19 @@ plugin.tx_bzgaberatungsstellensuche {
     _LOCAL_LANG.default {
         telephone = Tel.
     }
+    view {
+        templateRootPaths {
+            20 = EXT:bzga_beratungsstellensuche_essstoerungen/Resources/Private/Templates/
+        }
+
+        partialRootPaths {
+            20 = EXT:bzga_beratungsstellensuche_essstoerungen/Resources/Private/Partials/
+        }
+
+        layoutRootPaths {
+            20 = EXT:bzga_beratungsstellensuche_essstoerungen/Resources/Private/Layouts/
+        }
+    }
 }
+
 
