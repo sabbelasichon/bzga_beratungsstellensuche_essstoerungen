@@ -38,8 +38,10 @@ class ext_update
         $databaseUpdateUtility = $objectManager->get(DatabaseUpdateUtility::class);
         $databaseUpdateUtility->doUpdate('bzga_beratungsstellensuche_essstoerungen');
 
-        $content .= '<p>' . LocalizationUtility::translate('updateLanguageLabels',
-                'StaticInfoTables') . ' bzga_beratungsstellensuche_essstoerungen.</p>';
+        $content .= '<p>' . LocalizationUtility::translate(
+            'updateLanguageLabels',
+                'StaticInfoTables'
+        ) . ' bzga_beratungsstellensuche_essstoerungen.</p>';
 
         return $content;
     }

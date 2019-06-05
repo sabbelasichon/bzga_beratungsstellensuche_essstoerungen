@@ -23,6 +23,5 @@ use SJBR\StaticInfoTables\Domain\Model\AbstractEntity;
  */
 class Language extends AbstractEntity implements ExternalIdInterface
 {
-
     use \Bzga\BzgaBeratungsstellensuche\Domain\Model\ExternalIdTrait;
 }

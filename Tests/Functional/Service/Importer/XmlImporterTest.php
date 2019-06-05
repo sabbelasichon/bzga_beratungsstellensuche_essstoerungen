@@ -76,7 +76,6 @@ class XmlImporterTest extends FunctionalTestCase
     ];
 
     /**
-     * @return void
      */
     public function setUp()
     {
@@ -120,7 +119,6 @@ class XmlImporterTest extends FunctionalTestCase
     }
 
     /**
-     * @return void
      */
     public function tearDown()
     {

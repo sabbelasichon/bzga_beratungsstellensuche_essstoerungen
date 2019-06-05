@@ -73,24 +73,32 @@ class Importer
      */
     public function preImport(XmlImporter $importer, \SimpleXMLIterator $sxe, $pid, BaseSerializer $serializer)
     {
-        # Import Zielgruppen
+        // Import Zielgruppen
         $importer->convertRelations($sxe->zielgruppen->zielgruppe, $this->targetgroupManager, Targetgroup::class, $pid);
 
-        # Import Maßnahmen
+        // Import Maßnahmen
         $importer->convertRelations($sxe->massnahmen->massnahme, $this->measureManager, Measure::class, $pid);
 
-        # Import Experten
+        // Import Experten
         $importer->convertRelations($sxe->experten->experte, $this->expertManager, Expert::class, $pid);
 
-        # Import Qualifications
-        $importer->convertRelations($sxe->qualifikationen->qualifikation, $this->qualificationManager,
-            Qualification::class, $pid);
+        // Import Qualifications
+        $importer->convertRelations(
+            $sxe->qualifikationen->qualifikation,
+            $this->qualificationManager,
+            Qualification::class,
+            $pid
+        );
 
-        # Import Categories extended
-        $importer->convertRelations($sxe->beratungsarten2->beratungsart2, $this->categoryExtendedManager,
-            Category::class, $pid);
+        // Import Categories extended
+        $importer->convertRelations(
+            $sxe->beratungsarten2->beratungsart2,
+            $this->categoryExtendedManager,
+            Category::class,
+            $pid
+        );
 
-        # Import Types
+        // Import Types
         $importer->convertRelations($sxe->einrichtungsarten->einrichtungsart, $this->typeManager, Type::class, $pid);
 
         $this->measureManager->persist();

@@ -30,7 +30,6 @@ class EntryRepository
      * Modify the constraints used in the query
      *
      * @param array $params
-     * @return void
      */
     public function modify(array $params)
     {
