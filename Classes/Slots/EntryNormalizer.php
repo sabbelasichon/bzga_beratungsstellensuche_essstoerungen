@@ -15,6 +15,13 @@ namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Slots;
  * The TYPO3 project - inspiring people to share!
  */
 use Bzga\BzgaBeratungsstellensuche\Domain\Serializer\Normalizer\EntryNormalizer as BaseEntryNormalizer;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\CategoryRepository;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\ExpertRepository;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\MeasureRepository;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\QualificationRepository;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\TargetgroupRepository;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\TypeRepository;
+use SJBR\StaticInfoTables\Domain\Repository\LanguageRepository;
 
 /**
  * @author Sebastian Schreiber
@@ -23,52 +30,87 @@ class EntryNormalizer
 {
 
     /**
-     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\TargetgroupRepository
-     * @inject
+     * @var TargetgroupRepository
+     *
      */
     protected $targetgroupRepository;
 
     /**
-     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\MeasureRepository
-     * @inject
+     * @var MeasureRepository
+     *
      */
     protected $measureRepository;
 
     /**
-     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\QualificationRepository
-     * @inject
+     * @var QualificationRepository
+     *
      */
     protected $qualificationRepository;
 
     /**
-     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\ExpertRepository
-     * @inject
+     * @var ExpertRepository
+     *
      */
     protected $expertRepository;
 
     /**
-     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\CategoryRepository
-     * @inject
+     * @var CategoryRepository
+     *
      */
     protected $categoryRepository;
 
     /**
-     * @var \SJBR\StaticInfoTables\Domain\Repository\LanguageRepository
-     * @inject
+     * @var LanguageRepository
+     *
      */
     protected $languageRepository;
 
     /**
-     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\TypeRepository
-     * @inject
+     * @var TypeRepository
+     *
      */
     protected $typeRepository;
+
+    public function injectCategoryRepository(CategoryRepository $categoryRepository)
+    {
+        $this->categoryRepository = $categoryRepository;
+    }
+
+    public function injectExpertRepository(ExpertRepository $expertRepository)
+    {
+        $this->expertRepository = $expertRepository;
+    }
+
+    public function injectLanguageRepository(LanguageRepository $languageRepository)
+    {
+        $this->languageRepository = $languageRepository;
+    }
+
+    public function injectMeasureRepository(MeasureRepository $measureRepository)
+    {
+        $this->measureRepository = $measureRepository;
+    }
+
+    public function injectQualificationRepository(QualificationRepository $qualificationRepository)
+    {
+        $this->qualificationRepository = $qualificationRepository;
+    }
+
+    public function injectTargetgroupRepository(TargetgroupRepository $targetgroupRepository)
+    {
+        $this->targetgroupRepository = $targetgroupRepository;
+    }
+
+    public function injectTypeRepository(TypeRepository $typeRepository)
+    {
+        $this->typeRepository = $typeRepository;
+    }
 
     /**
      * @param array $callbacks
      * @return array
      */
-    public function additionalCallbacks(array $callbacks = [])
+    public function additionalCallbacks(array $callbacks = []): array
     {
         $callbacks = array_merge($callbacks, [
             'languages' => function () {
@@ -98,4 +140,5 @@ class EntryNormalizer
             'extendedCallbacks' => $callbacks,
         ];
     }
+
 }

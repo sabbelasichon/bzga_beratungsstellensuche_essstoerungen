@@ -84,22 +84,22 @@ class Entry extends \Bzga\BzgaBeratungsstellensuche\Domain\Model\Entry
     /**
      * @var array
      */
-    protected $allMeasures = null;
+    protected $allMeasures;
 
     /**
      * @var array
      */
-    protected $allLanguages = null;
+    protected $allLanguages;
 
     /**
      * @var array
      */
-    protected $allCategoriesExtended = null;
+    protected $allCategoriesExtended;
 
     /**
      * @var array
      */
-    protected $allTargetgroups = null;
+    protected $allTargetgroups;
 
     /**
      * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage

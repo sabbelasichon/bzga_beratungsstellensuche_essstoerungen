@@ -15,6 +15,7 @@ namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager;
  * The TYPO3 project - inspiring people to share!
  */
 use Bzga\BzgaBeratungsstellensuche\Domain\Manager\AbstractManager;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\MeasureRepository;
 
 /**
  * @author Sebastian Schreiber
@@ -23,16 +24,21 @@ class MeasureManager extends AbstractManager
 {
 
     /**
-     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\MeasureRepository
-     * @inject
+     * @var MeasureRepository
+     *
      */
     protected $repository;
 
     /**
-     * @return \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\MeasureRepository
+     * @return MeasureRepository
      */
-    public function getRepository()
+    public function getRepository(): MeasureRepository
     {
         return $this->repository;
+    }
+
+    public function injectRepository(MeasureRepository $repository)
+    {
+        $this->repository = $repository;
     }
 }

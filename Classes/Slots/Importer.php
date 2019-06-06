@@ -16,12 +16,19 @@ namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Slots;
  */
 use Bzga\BzgaBeratungsstellensuche\Domain\Serializer\Serializer as BaseSerializer;
 use Bzga\BzgaBeratungsstellensuche\Service\Importer\XmlImporter;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager\CategoryManager;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager\ExpertManager;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager\MeasureManager;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager\QualificationManager;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager\TargetgroupManager;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager\TypeManager;
 use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Category;
 use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Expert;
 use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Measure;
 use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Qualification;
 use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Targetgroup;
 use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Type;
+use SimpleXMLIterator;
 
 /**
  * @author Sebastian Schreiber
@@ -30,48 +37,78 @@ class Importer
 {
 
     /**
-     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager\TargetgroupManager
-     * @inject
+     * @var TargetgroupManager
+     *
      */
     protected $targetgroupManager;
 
     /**
-     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager\MeasureManager
-     * @inject
+     * @var MeasureManager
+     *
      */
     protected $measureManager;
 
     /**
-     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager\QualificationManager
-     * @inject
+     * @var QualificationManager
+     *
      */
     protected $qualificationManager;
 
     /**
-     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager\ExpertManager
-     * @inject
+     * @var ExpertManager
+     *
      */
     protected $expertManager;
 
     /**
-     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager\TypeManager
-     * @inject
+     * @var TypeManager
+     *
      */
     protected $typeManager;
 
     /**
-     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager\CategoryManager
-     * @inject
+     * @var CategoryManager
+     *
      */
     protected $categoryExtendedManager;
 
+    public function injectTargetgroupManager(TargetgroupManager $targetgroupManager)
+    {
+        $this->targetgroupManager = $targetgroupManager;
+    }
+
+    public function injectTypeManager(TypeManager $typeManager)
+    {
+        $this->typeManager = $typeManager;
+    }
+
+    public function injectMeasureManager(MeasureManager $measureManager)
+    {
+        $this->measureManager = $measureManager;
+    }
+
+    public function injectQualificationManager(QualificationManager $qualificationManager)
+    {
+        $this->qualificationManager = $qualificationManager;
+    }
+
+    public function injectCategoryExtendedManager(CategoryManager $categoryExtendedManager)
+    {
+        $this->categoryExtendedManager = $categoryExtendedManager;
+    }
+
+    public function injectExpertManager(ExpertManager $expertManager)
+    {
+        $this->expertManager = $expertManager;
+    }
+
     /**
      * @param XmlImporter $importer
-     * @param \SimpleXMLIterator $sxe
+     * @param SimpleXMLIterator $sxe
      * @param $pid
      * @param BaseSerializer $serializer
      */
-    public function preImport(XmlImporter $importer, \SimpleXMLIterator $sxe, $pid, BaseSerializer $serializer)
+    public function preImport(XmlImporter $importer, SimpleXMLIterator $sxe, $pid, BaseSerializer $serializer)
     {
         // Import Zielgruppen
         $importer->convertRelations($sxe->zielgruppen->zielgruppe, $this->targetgroupManager, Targetgroup::class, $pid);
@@ -108,4 +145,5 @@ class Importer
         $this->categoryExtendedManager->persist();
         $this->typeManager->persist();
     }
+
 }

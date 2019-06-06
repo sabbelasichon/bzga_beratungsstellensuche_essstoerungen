@@ -14,6 +14,9 @@ namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Slots;
  *
  * The TYPO3 project - inspiring people to share!
  */
+
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\CategoryRepository;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\TargetgroupRepository;
 use TYPO3\CMS\Extbase\Mvc\Controller\MvcPropertyMappingConfiguration;
 
 /**
@@ -23,16 +26,26 @@ class EntryController
 {
 
     /**
-     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\TargetgroupRepository
-     * @inject
+     * @var TargetgroupRepository
+     *
      */
     protected $targetgroupRepository;
 
     /**
-     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\CategoryRepository
-     * @inject
+     * @var CategoryRepository
+     *
      */
     protected $categoryRepository;
+
+    public function injectTargetgroupRepository(TargetgroupRepository $targetgroupRepository)
+    {
+        $this->targetgroupRepository = $targetgroupRepository;
+    }
+
+    public function injectCategoryRepository(CategoryRepository $categoryRepository)
+    {
+        $this->categoryRepository = $categoryRepository;
+    }
 
     /**
      * @param $variables
@@ -65,4 +78,5 @@ class EntryController
             $propertyMappingConfiguration->allowModificationForSubProperty($allowSubProperty);
         }
     }
+
 }

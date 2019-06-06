@@ -15,6 +15,7 @@ namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager;
  * The TYPO3 project - inspiring people to share!
  */
 use Bzga\BzgaBeratungsstellensuche\Domain\Manager\AbstractManager;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\ExpertRepository;
 
 /**
  * @author Sebastian Schreiber
@@ -22,16 +23,21 @@ use Bzga\BzgaBeratungsstellensuche\Domain\Manager\AbstractManager;
 class ExpertManager extends AbstractManager
 {
     /**
-     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\ExpertRepository
-     * @inject
+     * @var ExpertRepository
+     *
      */
     protected $repository;
 
     /**
-     * @return \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\ExpertRepository
+     * @return ExpertRepository
      */
-    public function getRepository()
+    public function getRepository(): ExpertRepository
     {
         return $this->repository;
+    }
+
+    public function injectRepository(ExpertRepository $repository)
+    {
+        $this->repository = $repository;
     }
 }

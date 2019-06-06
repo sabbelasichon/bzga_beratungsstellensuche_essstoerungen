@@ -15,6 +15,7 @@ namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager;
  * The TYPO3 project - inspiring people to share!
  */
 use Bzga\BzgaBeratungsstellensuche\Domain\Manager\AbstractManager;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\QualificationRepository;
 
 /**
  * @author Sebastian Schreiber
@@ -23,16 +24,21 @@ class QualificationManager extends AbstractManager
 {
 
     /**
-     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\QualificationRepository
-     * @inject
+     * @var QualificationRepository
+     *
      */
     protected $repository;
 
     /**
-     * @return \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\QualificationRepository
+     * @return QualificationRepository
      */
-    public function getRepository()
+    public function getRepository(): QualificationRepository
     {
         return $this->repository;
+    }
+
+    public function injectRepository(QualificationRepository $repository)
+    {
+        $this->repository = $repository;
     }
 }

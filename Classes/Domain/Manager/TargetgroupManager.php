@@ -15,6 +15,7 @@ namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager;
  * The TYPO3 project - inspiring people to share!
  */
 use Bzga\BzgaBeratungsstellensuche\Domain\Manager\AbstractManager;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\TargetgroupRepository;
 
 /**
  * @author Sebastian Schreiber
@@ -23,16 +24,21 @@ class TargetgroupManager extends AbstractManager
 {
 
     /**
-     * @var \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\TargetgroupRepository
-     * @inject
+     * @var TargetgroupRepository
+     *
      */
     protected $repository;
 
     /**
-     * @return \Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\TargetgroupRepository
+     * @return TargetgroupRepository
      */
-    public function getRepository()
+    public function getRepository(): TargetgroupRepository
     {
         return $this->repository;
+    }
+
+    public function injectRepository(TargetgroupRepository $repository)
+    {
+        $this->repository = $repository;
     }
 }
