@@ -38,37 +38,31 @@ class Importer
 
     /**
      * @var TargetgroupManager
-     *
      */
     protected $targetgroupManager;
 
     /**
      * @var MeasureManager
-     *
      */
     protected $measureManager;
 
     /**
      * @var QualificationManager
-     *
      */
     protected $qualificationManager;
 
     /**
      * @var ExpertManager
-     *
      */
     protected $expertManager;
 
     /**
      * @var TypeManager
-     *
      */
     protected $typeManager;
 
     /**
      * @var CategoryManager
-     *
      */
     protected $categoryExtendedManager;
 
@@ -145,5 +139,4 @@ class Importer
         $this->categoryExtendedManager->persist();
         $this->typeManager->persist();
     }
-
 }

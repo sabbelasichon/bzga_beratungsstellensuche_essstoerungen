@@ -25,7 +25,6 @@ class CategoryManager extends AbstractManager
 
     /**
      * @var CategoryRepository
-     *
      */
     protected $repository;
 

@@ -25,7 +25,6 @@ class QualificationManager extends AbstractManager
 
     /**
      * @var QualificationRepository
-     *
      */
     protected $repository;
 

@@ -31,43 +31,36 @@ class EntryNormalizer
 
     /**
      * @var TargetgroupRepository
-     *
      */
     protected $targetgroupRepository;
 
     /**
      * @var MeasureRepository
-     *
      */
     protected $measureRepository;
 
     /**
      * @var QualificationRepository
-     *
      */
     protected $qualificationRepository;
 
     /**
      * @var ExpertRepository
-     *
      */
     protected $expertRepository;
 
     /**
      * @var CategoryRepository
-     *
      */
     protected $categoryRepository;
 
     /**
      * @var LanguageRepository
-     *
      */
     protected $languageRepository;
 
     /**
      * @var TypeRepository
-     *
      */
     protected $typeRepository;
 
@@ -140,5 +133,4 @@ class EntryNormalizer
             'extendedCallbacks' => $callbacks,
         ];
     }
-
 }

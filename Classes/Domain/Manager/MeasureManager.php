@@ -25,7 +25,6 @@ class MeasureManager extends AbstractManager
 
     /**
      * @var MeasureRepository
-     *
      */
     protected $repository;
 

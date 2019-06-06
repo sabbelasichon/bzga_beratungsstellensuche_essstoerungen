@@ -24,7 +24,6 @@ class ExpertManager extends AbstractManager
 {
     /**
      * @var ExpertRepository
-     *
      */
     protected $repository;
 

@@ -25,7 +25,6 @@ class TypeManager extends AbstractManager
 
     /**
      * @var TypeRepository
-     *
      */
     protected $repository;
 

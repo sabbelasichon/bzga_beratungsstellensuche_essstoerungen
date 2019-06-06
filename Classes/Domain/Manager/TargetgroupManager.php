@@ -25,7 +25,6 @@ class TargetgroupManager extends AbstractManager
 
     /**
      * @var TargetgroupRepository
-     *
      */
     protected $repository;
 

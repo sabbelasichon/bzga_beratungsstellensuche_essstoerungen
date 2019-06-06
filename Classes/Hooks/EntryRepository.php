@@ -38,7 +38,6 @@ class EntryRepository
     {
         $demand = $params['demand'] ?? null;
         /** @var $demand Demand|BaseDemand */
-
         if (!$demand instanceof BaseDemand) {
             return;
         }
