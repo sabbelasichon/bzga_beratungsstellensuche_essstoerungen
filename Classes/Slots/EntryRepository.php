@@ -22,7 +22,9 @@ use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\MeasureReposit
 use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\QualificationRepository;
 use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\TargetgroupRepository;
 use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\TypeRepository;
-use TYPO3\CMS\Core\Database\DatabaseConnection;
+use TYPO3\CMS\Core\Database\Connection;
+use TYPO3\CMS\Core\Database\ConnectionPool;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /**
  * @author Sebastian Schreiber
@@ -35,22 +37,36 @@ class EntryRepository
      */
     const LANGUAGE_MM_TABLE = 'tx_bzgaberatungsstellensuche_entry_language_mm';
 
-    /**
-     * @param DatabaseConnection $databaseConnection
-     */
-    public function truncate(DatabaseConnection $databaseConnection)
+    public function truncate()
     {
-        $databaseConnection->exec_TRUNCATEquery(CategoryRepository::TABLE);
-        $databaseConnection->exec_TRUNCATEquery(CategoryRepository::MM_TABLE);
-        $databaseConnection->exec_TRUNCATEquery(TargetgroupRepository::TABLE);
-        $databaseConnection->exec_TRUNCATEquery(TargetgroupRepository::MM_TABLE);
-        $databaseConnection->exec_TRUNCATEquery(MeasureRepository::TABLE);
-        $databaseConnection->exec_TRUNCATEquery(MeasureRepository::MM_TABLE);
-        $databaseConnection->exec_TRUNCATEquery(ExpertRepository::TABLE);
-        $databaseConnection->exec_TRUNCATEquery(ExpertRepository::MM_TABLE);
-        $databaseConnection->exec_TRUNCATEquery(TypeRepository::TABLE);
-        $databaseConnection->exec_TRUNCATEquery(QualificationRepository::TABLE);
-        $databaseConnection->exec_TRUNCATEquery(QualificationRepository::MM_TABLE);
-        $databaseConnection->exec_TRUNCATEquery(self::LANGUAGE_MM_TABLE);
+        $this->getDatabaseConnectionForTable(CategoryRepository::TABLE)->truncate(CategoryRepository::TABLE);
+        $this->getDatabaseConnectionForTable(CategoryRepository::MM_TABLE)->truncate(CategoryRepository::MM_TABLE);
+
+        $this->getDatabaseConnectionForTable(TargetgroupRepository::TABLE)->truncate(TargetgroupRepository::TABLE);
+        $this->getDatabaseConnectionForTable(TargetgroupRepository::MM_TABLE)->truncate(TargetgroupRepository::MM_TABLE);
+
+        $this->getDatabaseConnectionForTable(MeasureRepository::TABLE)->truncate(MeasureRepository::TABLE);
+        $this->getDatabaseConnectionForTable(MeasureRepository::MM_TABLE)->truncate(MeasureRepository::MM_TABLE);
+
+        $this->getDatabaseConnectionForTable(ExpertRepository::TABLE)->truncate(ExpertRepository::TABLE);
+        $this->getDatabaseConnectionForTable(ExpertRepository::MM_TABLE)->truncate(ExpertRepository::MM_TABLE);
+
+        $this->getDatabaseConnectionForTable(TypeRepository::TABLE)->truncate(TypeRepository::TABLE);
+
+        $this->getDatabaseConnectionForTable(QualificationRepository::TABLE)->truncate(QualificationRepository::TABLE);
+        $this->getDatabaseConnectionForTable(QualificationRepository::MM_TABLE)->truncate(QualificationRepository::MM_TABLE);
+
+        $this->getDatabaseConnectionForTable(self::LANGUAGE_MM_TABLE)->truncate(self::LANGUAGE_MM_TABLE);
+    }
+
+    /**
+     * @param string $table
+     *
+     * @return Connection
+     */
+    protected function getDatabaseConnectionForTable(string $table): Connection
+    {
+        return GeneralUtility::makeInstance(ConnectionPool::class)
+                             ->getConnectionForTable($table);
     }
 }
