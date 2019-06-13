@@ -15,9 +15,12 @@ namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Tests\Functional\Service\I
  * The TYPO3 project - inspiring people to share!
  */
 
+use Bzga\BzgaBeratungsstellensuche\Service\Importer\Exception\ContentCouldNotBeFetchedException;
 use Bzga\BzgaBeratungsstellensuche\Service\Importer\XmlImporter;
+use Nimut\TestingFramework\Exception\Exception;
 use Nimut\TestingFramework\TestCase\FunctionalTestCase;
 use TYPO3\CMS\Core\Core\Bootstrap;
+use TYPO3\CMS\Core\Resource\Exception\FileDoesNotExistException;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
 use TYPO3\CMS\Extbase\Object\ObjectManagerInterface;
@@ -40,16 +43,6 @@ class XmlImporterTest extends FunctionalTestCase
      * @var XmlImporter
      */
     protected $xmlImporter;
-
-    /**
-     * To prevent some false/positive sql failures
-     * @var array
-     */
-    protected $configurationToUseInTestInstance = [
-        'SYS' => [
-            'setDBinit' => 'SET SESSION sql_mode=""'
-        ]
-    ];
 
     /**
      * @var array
@@ -76,6 +69,7 @@ class XmlImporterTest extends FunctionalTestCase
     ];
 
     /**
+     * @throws Exception
      */
     public function setUp()
     {
@@ -102,12 +96,16 @@ class XmlImporterTest extends FunctionalTestCase
      */
     public function importFromFile()
     {
-        $this->xmlImporter->importFromFile('fileadmin/import/beratungsstellen.xml', self::SYS_FOLDER_FOR_ENTRIES);
+        try {
+            $this->xmlImporter->importFromFile('fileadmin/import/beratungsstellen.xml', self::SYS_FOLDER_FOR_ENTRIES);
+        } catch (ContentCouldNotBeFetchedException $e) {
+        } catch (FileDoesNotExistException $e) {
+        }
 
-        $this->assertEquals(3, $this->getDatabaseConnection()->exec_SELECTcountRows('*', 'tx_bzgaberatungsstellensuche_domain_model_category'));
-        $this->assertEquals(1, $this->getDatabaseConnection()->exec_SELECTcountRows('*', 'tx_bzgaberatungsstellensuche_domain_model_entry'));
-        $this->assertEquals(13, $this->getDatabaseConnection()->exec_SELECTcountRows('*', 'tx_bzgaberatungsstellensuche_domain_model_measure'));
-        $this->assertEquals(10, $this->getDatabaseConnection()->exec_SELECTcountRows('*', 'tx_bzgaberatungsstellensuche_entry_measure_mm'));
+        $this->assertEquals(3, $this->getDatabaseConnection()->selectCount('*', 'tx_bzgaberatungsstellensuche_domain_model_category'));
+        $this->assertEquals(1, $this->getDatabaseConnection()->selectCount('*', 'tx_bzgaberatungsstellensuche_domain_model_entry'));
+        $this->assertEquals(13, $this->getDatabaseConnection()->selectCount('*', 'tx_bzgaberatungsstellensuche_domain_model_measure'));
+        $this->assertEquals(10, $this->getDatabaseConnection()->selectCount('*', 'tx_bzgaberatungsstellensuche_entry_measure_mm'));
     }
 
     /**
@@ -115,14 +113,13 @@ class XmlImporterTest extends FunctionalTestCase
      */
     public function externalIdForStaticLanguagesCorrectlySet()
     {
-        $this->assertEquals(6, $this->getDatabaseConnection()->exec_SELECTcountRows('*', 'static_languages', 'external_id > 0'));
+        $this->assertEquals(6, $this->getDatabaseConnection()->selectCount('*', 'static_languages', 'external_id > 0'));
     }
 
     /**
      */
     public function tearDown()
     {
-        unset($this->xmlImporter);
-        unset($this->objectManager);
+        unset($this->xmlImporter, $this->objectManager);
     }
 }
