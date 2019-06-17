@@ -48,13 +48,15 @@
     "bzga/bzga-beratungsstellensuche-essstoerungen": "self.version"
   },
   "config": {
-    "vendor-dir": ".Build/vendor",
-    "bin-dir": ".Build/bin"
+    "vendor-dir": ".Build/vendor"
   },
   "scripts": {
+    "link-extension": [
+      "@php -r 'is_dir($extFolder=__DIR__.\"/.Build/public/typo3conf/ext/\") || mkdir($extFolder, 0777, true);'",
+      "@php -r 'file_exists($extFolder=__DIR__.\"/.Build/public/typo3conf/ext/bzga_beratungsstellensuche_essstoerungen\") || symlink(__DIR__,$extFolder);'"
+    ],
     "post-autoload-dump": [
-      "mkdir -p .Build/Web/typo3conf/ext/",
-      "[ -L .Build/Web/typo3conf/ext/bzga_beratungsstellensuche_essstoerungen ] || ln -snvf ../../../../. .Build/Web/typo3conf/ext/bzga_beratungsstellensuche_essstoerungen"
+      "@link-extension"
     ]
   },
   "extra": {
@@ -63,7 +65,7 @@
     },
     "typo3/cms": {
       "cms-package-dir": "{$vendor-dir}/typo3/cms",
-      "web-dir": ".Build/Web"
+      "web-dir": ".Build/public"
     }
   }
 }

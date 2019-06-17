@@ -3,3 +3,5 @@ phpunit.xml
 .Build
 composer.lock
 ToDo.txt
+functional.sh
+docker-compose.yml
