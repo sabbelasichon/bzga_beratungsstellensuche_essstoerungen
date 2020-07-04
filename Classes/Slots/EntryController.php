@@ -34,21 +34,17 @@ class EntryController
      */
     protected $categoryRepository;
 
-    public function injectTargetgroupRepository(TargetgroupRepository $targetgroupRepository)
+    public function injectTargetgroupRepository(TargetgroupRepository $targetgroupRepository): void
     {
         $this->targetgroupRepository = $targetgroupRepository;
     }
 
-    public function injectCategoryRepository(CategoryRepository $categoryRepository)
+    public function injectCategoryRepository(CategoryRepository $categoryRepository): void
     {
         $this->categoryRepository = $categoryRepository;
     }
 
-    /**
-     * @param $variables
-     * @return array
-     */
-    public function listAction($variables)
+    public function listAction(array $variables): array
     {
         $targetgroups = $this->targetgroupRepository->findAll();
         $categoriesExtended = $this->categoryRepository->findAll();
@@ -62,10 +58,7 @@ class EntryController
         ];
     }
 
-    /**
-     * @param MvcPropertyMappingConfiguration $propertyMappingConfiguration
-     */
-    public function initializeAction(MvcPropertyMappingConfiguration $propertyMappingConfiguration)
+    public function initializeAction(MvcPropertyMappingConfiguration $propertyMappingConfiguration): void
     {
         $allowSubProperties = ['targetgroups', 'categoriesExtended'];
 

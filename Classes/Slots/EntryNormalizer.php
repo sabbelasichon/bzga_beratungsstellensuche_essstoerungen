@@ -64,45 +64,41 @@ class EntryNormalizer
      */
     protected $typeRepository;
 
-    public function injectCategoryRepository(CategoryRepository $categoryRepository)
+    public function injectCategoryRepository(CategoryRepository $categoryRepository): void
     {
         $this->categoryRepository = $categoryRepository;
     }
 
-    public function injectExpertRepository(ExpertRepository $expertRepository)
+    public function injectExpertRepository(ExpertRepository $expertRepository): void
     {
         $this->expertRepository = $expertRepository;
     }
 
-    public function injectLanguageRepository(LanguageRepository $languageRepository)
+    public function injectLanguageRepository(LanguageRepository $languageRepository): void
     {
         $this->languageRepository = $languageRepository;
     }
 
-    public function injectMeasureRepository(MeasureRepository $measureRepository)
+    public function injectMeasureRepository(MeasureRepository $measureRepository): void
     {
         $this->measureRepository = $measureRepository;
     }
 
-    public function injectQualificationRepository(QualificationRepository $qualificationRepository)
+    public function injectQualificationRepository(QualificationRepository $qualificationRepository): void
     {
         $this->qualificationRepository = $qualificationRepository;
     }
 
-    public function injectTargetgroupRepository(TargetgroupRepository $targetgroupRepository)
+    public function injectTargetgroupRepository(TargetgroupRepository $targetgroupRepository): void
     {
         $this->targetgroupRepository = $targetgroupRepository;
     }
 
-    public function injectTypeRepository(TypeRepository $typeRepository)
+    public function injectTypeRepository(TypeRepository $typeRepository): void
     {
         $this->typeRepository = $typeRepository;
     }
 
-    /**
-     * @param array $callbacks
-     * @return array
-     */
     public function additionalCallbacks(array $callbacks = []): array
     {
         $callbacks = array_merge($callbacks, [

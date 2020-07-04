@@ -66,43 +66,37 @@ class Importer
      */
     protected $categoryExtendedManager;
 
-    public function injectTargetgroupManager(TargetgroupManager $targetgroupManager)
+    public function injectTargetgroupManager(TargetgroupManager $targetgroupManager): void
     {
         $this->targetgroupManager = $targetgroupManager;
     }
 
-    public function injectTypeManager(TypeManager $typeManager)
+    public function injectTypeManager(TypeManager $typeManager): void
     {
         $this->typeManager = $typeManager;
     }
 
-    public function injectMeasureManager(MeasureManager $measureManager)
+    public function injectMeasureManager(MeasureManager $measureManager): void
     {
         $this->measureManager = $measureManager;
     }
 
-    public function injectQualificationManager(QualificationManager $qualificationManager)
+    public function injectQualificationManager(QualificationManager $qualificationManager): void
     {
         $this->qualificationManager = $qualificationManager;
     }
 
-    public function injectCategoryExtendedManager(CategoryManager $categoryExtendedManager)
+    public function injectCategoryExtendedManager(CategoryManager $categoryExtendedManager): void
     {
         $this->categoryExtendedManager = $categoryExtendedManager;
     }
 
-    public function injectExpertManager(ExpertManager $expertManager)
+    public function injectExpertManager(ExpertManager $expertManager): void
     {
         $this->expertManager = $expertManager;
     }
 
-    /**
-     * @param XmlImporter $importer
-     * @param SimpleXMLIterator $sxe
-     * @param $pid
-     * @param BaseSerializer $serializer
-     */
-    public function preImport(XmlImporter $importer, SimpleXMLIterator $sxe, $pid, BaseSerializer $serializer)
+    public function preImport(XmlImporter $importer, SimpleXMLIterator $sxe, $pid, BaseSerializer $serializer): void
     {
         // Import Zielgruppen
         $importer->convertRelations($sxe->zielgruppen->zielgruppe, $this->targetgroupManager, Targetgroup::class, $pid);

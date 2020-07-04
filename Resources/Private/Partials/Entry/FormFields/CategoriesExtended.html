@@ -1,7 +1,8 @@
-{namespace bzga=Bzga\BzgaBeratungsstellensuche\ViewHelpers}
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <div class="form-group">
     <label for="categories-extended">
-        <bzga:translate key="categories-extended-form-label"/>
+        <f:translate key="categories-extended-form-label"/>
     </label>
-    <f:form.select class="form-control" multiple="true" prependOptionValue="" prependOptionLabel="{bzga:translate(key: 'all')}" property="categoriesExtended" id="categories-extended" options="{categoriesExtended}"/>
+    <f:form.select class="form-control" multiple="true" prependOptionValue="" prependOptionLabel="{f:translate(key: 'all')}" property="categoriesExtended" id="categories-extended" options="{categoriesExtended}"/>
 </div>
+</html>

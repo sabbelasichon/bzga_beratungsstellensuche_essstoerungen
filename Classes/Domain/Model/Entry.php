@@ -69,17 +69,17 @@ class Entry extends \Bzga\BzgaBeratungsstellensuche\Domain\Model\Entry
     /**
      * @var string
      */
-    protected $languageOther;
+    protected $languageOther = '';
 
     /**
      * @var string
      */
-    protected $measureOther;
+    protected $measureOther = '';
 
     /**
      * @var string
      */
-    protected $targetgroupOther;
+    protected $targetgroupOther = '';
 
     /**
      * @var array

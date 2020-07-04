@@ -24,10 +24,10 @@ class ExpertRepository extends AbstractBaseRepository
     /**
      * @var string
      */
-    const TABLE = 'tx_bzgaberatungsstellensuche_domain_model_expert';
+    public const TABLE = 'tx_bzgaberatungsstellensuche_domain_model_expert';
 
     /**
      * @var string
      */
-    const MM_TABLE = 'tx_bzgaberatungsstellensuche_entry_expert_mm';
+    public const MM_TABLE = 'tx_bzgaberatungsstellensuche_entry_expert_mm';
 }

@@ -5,53 +5,53 @@
         <header/>
         <body>
             <trans-unit id="tx_bzgaberatungsstellensuche_domain_model_targetgroup" xml:space="preserve">
-				<source>Zielgruppe</source>
-			</trans-unit>
-			<trans-unit id="tx_bzgaberatungsstellensuche_domain_model_entry.targetgroups" xml:space="preserve">
-				<source>Zielgruppen</source>
-			</trans-unit>
-			<trans-unit id="tx_bzgaberatungsstellensuche_domain_model_entry.minisite" xml:space="preserve">
-				<source>Minisite</source>
-			</trans-unit>
-			<trans-unit id="tx_bzgaberatungsstellensuche_domain_model_measure" xml:space="preserve">
-				<source>Maßnahme</source>
-			</trans-unit>
-			<trans-unit id="tx_bzgaberatungsstellensuche_domain_model_entry.measures" xml:space="preserve">
-				<source>Maßnahmen</source>
-			</trans-unit>
-			<trans-unit id="tx_bzgaberatungsstellensuche_domain_model_expert" xml:space="preserve">
-				<source>Experte</source>
-			</trans-unit>
-			<trans-unit id="tx_bzgaberatungsstellensuche_domain_model_entry.experts" xml:space="preserve">
-				<source>Experten</source>
-			</trans-unit>
-			<trans-unit id="tx_bzgaberatungsstellensuche_domain_model_qualification" xml:space="preserve">
-				<source>Qualifikation</source>
-			</trans-unit>
-			<trans-unit id="tx_bzgaberatungsstellensuche_domain_model_entry.qualifications" xml:space="preserve">
-				<source>Qualifikationen</source>
-			</trans-unit>
-			<trans-unit id="tx_bzgaberatungsstellensuche_domain_model_type" xml:space="preserve">
-				<source>Einrichtungsart</source>
-			</trans-unit>
-			<trans-unit id="tx_bzgaberatungsstellensuche_domain_model_category_extended" xml:space="preserve">
-				<source>Beratungsart - Essstörungen</source>
-			</trans-unit>
-			<trans-unit id="tx_bzgaberatungsstellensuche_domain_model_entry.languages" xml:space="preserve">
-				<source>Fremdsprachen</source>
-			</trans-unit>
-			<trans-unit id="tx_bzgaberatungsstellensuche_domain_model_entry.category_extended_other" xml:space="preserve">
-				<source>Beratungsart - Essstörungen - Sonstige</source>
-			</trans-unit>
-			<trans-unit id="tx_bzgaberatungsstellensuche_domain_model_entry.language_other" xml:space="preserve">
-				<source>Fremdsprache - Sonstige</source>
-			</trans-unit>
-			<trans-unit id="tx_bzgaberatungsstellensuche_domain_model_entry.targetgroup_other" xml:space="preserve">
-				<source>Zielgruppe - Sonstige</source>
-			</trans-unit>
-			<trans-unit id="tx_bzgaberatungsstellensuche_domain_model_entry.measure_other" xml:space="preserve">
-				<source>Massnahme - Sonstige</source>
-			</trans-unit>
+                <source>Zielgruppe</source>
+            </trans-unit>
+            <trans-unit id="tx_bzgaberatungsstellensuche_domain_model_entry.targetgroups" xml:space="preserve">
+                <source>Zielgruppen</source>
+            </trans-unit>
+            <trans-unit id="tx_bzgaberatungsstellensuche_domain_model_entry.minisite" xml:space="preserve">
+                <source>Minisite</source>
+            </trans-unit>
+            <trans-unit id="tx_bzgaberatungsstellensuche_domain_model_measure" xml:space="preserve">
+                <source>Maßnahme</source>
+            </trans-unit>
+            <trans-unit id="tx_bzgaberatungsstellensuche_domain_model_entry.measures" xml:space="preserve">
+                <source>Maßnahmen</source>
+            </trans-unit>
+            <trans-unit id="tx_bzgaberatungsstellensuche_domain_model_expert" xml:space="preserve">
+                <source>Experte</source>
+            </trans-unit>
+            <trans-unit id="tx_bzgaberatungsstellensuche_domain_model_entry.experts" xml:space="preserve">
+                <source>Experten</source>
+            </trans-unit>
+            <trans-unit id="tx_bzgaberatungsstellensuche_domain_model_qualification" xml:space="preserve">
+                <source>Qualifikation</source>
+            </trans-unit>
+            <trans-unit id="tx_bzgaberatungsstellensuche_domain_model_entry.qualifications" xml:space="preserve">
+                <source>Qualifikationen</source>
+            </trans-unit>
+            <trans-unit id="tx_bzgaberatungsstellensuche_domain_model_type" xml:space="preserve">
+                <source>Einrichtungsart</source>
+            </trans-unit>
+            <trans-unit id="tx_bzgaberatungsstellensuche_domain_model_category_extended" xml:space="preserve">
+                <source>Beratungsart - Essstörungen</source>
+            </trans-unit>
+            <trans-unit id="tx_bzgaberatungsstellensuche_domain_model_entry.languages" xml:space="preserve">
+                <source>Fremdsprachen</source>
+            </trans-unit>
+            <trans-unit id="tx_bzgaberatungsstellensuche_domain_model_entry.category_extended_other" xml:space="preserve">
+                <source>Beratungsart - Essstörungen - Sonstige</source>
+            </trans-unit>
+            <trans-unit id="tx_bzgaberatungsstellensuche_domain_model_entry.language_other" xml:space="preserve">
+                <source>Fremdsprache - Sonstige</source>
+            </trans-unit>
+            <trans-unit id="tx_bzgaberatungsstellensuche_domain_model_entry.targetgroup_other" xml:space="preserve">
+                <source>Zielgruppe - Sonstige</source>
+            </trans-unit>
+            <trans-unit id="tx_bzgaberatungsstellensuche_domain_model_entry.measure_other" xml:space="preserve">
+                <source>Massnahme - Sonstige</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
