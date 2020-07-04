@@ -5,11 +5,11 @@
         <header/>
         <body>
             <trans-unit id="foreign-language-form-label" xml:space="preserve">
-				<source>Fremdsprachige Beratung</source>
-			</trans-unit>
-			<trans-unit id="categories-extended-form-label" xml:space="preserve">
-				<source>Beratungsart</source>
-			</trans-unit>
+                <source>Fremdsprachige Beratung</source>
+            </trans-unit>
+            <trans-unit id="categories-extended-form-label" xml:space="preserve">
+                <source>Beratungsart</source>
+            </trans-unit>
             <trans-unit id="targetgroups-form-label" xml:space="preserve">
                 <source>Zielgruppen</source>
             </trans-unit>

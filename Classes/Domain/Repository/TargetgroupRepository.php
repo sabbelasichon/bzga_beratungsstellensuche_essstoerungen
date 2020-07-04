@@ -24,10 +24,10 @@ class TargetgroupRepository extends AbstractBaseRepository
     /**
      * @var string
      */
-    const TABLE = 'tx_bzgaberatungsstellensuche_domain_model_targetgroup';
+    public const TABLE = 'tx_bzgaberatungsstellensuche_domain_model_targetgroup';
 
     /**
      * @var string
      */
-    const MM_TABLE = 'tx_bzgaberatungsstellensuche_entry_targetgroup_mm';
+    public const MM_TABLE = 'tx_bzgaberatungsstellensuche_entry_targetgroup_mm';
 }

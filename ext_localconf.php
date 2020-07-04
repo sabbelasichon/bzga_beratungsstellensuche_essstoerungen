@@ -67,8 +67,7 @@ call_user_func(function ($packageKey) {
     );
 
     // Extend the demand query
-    $GLOBALS['TYPO3_CONF_VARS']['EXT']['bzga_beratungsstellensuche']['Domain/Repository/EntryRepository.php']['findDemanded'][]
-        = 'EXT:bzga_beratungsstellensuche_essstoerungen/Classes/Hooks/EntryRepository.php:Bzga\\BzgaBeratungsstellensucheEssstoerungen\\Hooks\\EntryRepository->modify';
+    $GLOBALS['TYPO3_CONF_VARS']['EXT']['bzga_beratungsstellensuche']['Domain/Repository/EntryRepository.php']['findDemanded'][] = \Bzga\BzgaBeratungsstellensucheEssstoerungen\Hooks\EntryRepository::class . '->modify';
 
     // Extend the form fields in flexforms
     $fields = [

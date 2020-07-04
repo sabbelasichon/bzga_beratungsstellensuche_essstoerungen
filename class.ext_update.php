@@ -18,18 +18,9 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
 use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 
-/**
- * Class for updating the db
- */
 class ext_update
 {
-
-    /**
-     * Main function, returning the HTML content
-     *
-     * @return string HTML
-     */
-    public function main()
+    public function main(): string
     {
         $content = '';
         /** @var ObjectManager $objectManager */
@@ -46,10 +37,7 @@ class ext_update
         return $content;
     }
 
-    /**
-     * @return bool
-     */
-    public function access()
+    public function access(): bool
     {
         return true;
     }

@@ -34,7 +34,7 @@ class Demand extends \Bzga\BzgaBeratungsstellensuche\Domain\Model\Dto\Demand
     /**
      * @var bool
      */
-    protected $foreignLanguage;
+    protected $foreignLanguage = false;
 
     /**
      * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
@@ -55,7 +55,7 @@ class Demand extends \Bzga\BzgaBeratungsstellensuche\Domain\Model\Dto\Demand
     /**
      * @return bool
      */
-    public function isForeignLanguage()
+    public function isForeignLanguage(): bool
     {
         return $this->foreignLanguage;
     }
@@ -63,9 +63,9 @@ class Demand extends \Bzga\BzgaBeratungsstellensuche\Domain\Model\Dto\Demand
     /**
      * @param bool $foreignLanguage
      */
-    public function setForeignLanguage($foreignLanguage)
+    public function setForeignLanguage($foreignLanguage): void
     {
-        $this->foreignLanguage = $foreignLanguage;
+        $this->foreignLanguage = (bool)$foreignLanguage;
     }
 
     /**
@@ -79,7 +79,7 @@ class Demand extends \Bzga\BzgaBeratungsstellensuche\Domain\Model\Dto\Demand
     /**
      * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $targetgroups
      */
-    public function setTargetgroups($targetgroups)
+    public function setTargetgroups($targetgroups): void
     {
         $this->targetgroups = $targetgroups;
     }

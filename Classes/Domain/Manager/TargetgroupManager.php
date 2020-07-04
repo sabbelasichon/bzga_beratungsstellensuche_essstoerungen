@@ -15,6 +15,7 @@ namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Manager;
  * The TYPO3 project - inspiring people to share!
  */
 use Bzga\BzgaBeratungsstellensuche\Domain\Manager\AbstractManager;
+use Bzga\BzgaBeratungsstellensuche\Domain\Repository\AbstractBaseRepository;
 use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Repository\TargetgroupRepository;
 
 /**
@@ -31,12 +32,12 @@ class TargetgroupManager extends AbstractManager
     /**
      * @return TargetgroupRepository
      */
-    public function getRepository(): TargetgroupRepository
+    public function getRepository(): AbstractBaseRepository
     {
         return $this->repository;
     }
 
-    public function injectRepository(TargetgroupRepository $repository)
+    public function injectRepository(TargetgroupRepository $repository): void
     {
         $this->repository = $repository;
     }

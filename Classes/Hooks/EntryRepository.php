@@ -18,7 +18,6 @@ use Bzga\BzgaBeratungsstellensuche\Domain\Model\Dto\Demand as BaseDemand;
 use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Category;
 use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Dto\Demand;
 use Bzga\BzgaBeratungsstellensucheEssstoerungen\Domain\Model\Targetgroup;
-use TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException;
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 
 /**
@@ -26,15 +25,7 @@ use TYPO3\CMS\Extbase\Persistence\QueryInterface;
  */
 class EntryRepository
 {
-
-    /**
-     * Modify the constraints used in the query
-     *
-     * @param array $params
-     *
-     * @throws InvalidQueryException
-     */
-    public function modify(array $params)
+    public function modify(array $params): void
     {
         $demand = $params['demand'] ?? null;
         /** @var $demand Demand|BaseDemand */

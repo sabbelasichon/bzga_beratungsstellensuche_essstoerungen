@@ -1,7 +1,8 @@
-{namespace bzga=Bzga\BzgaBeratungsstellensuche\ViewHelpers}
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <div class="form-group">
     <label for="measures">
-        <bzga:translate key="measures-form-label"/>
+        <f:translate key="measures-form-label"/>
     </label>
-    <f:form.select class="form-control" multiple="true" prependOptionValue="" prependOptionLabel="{bzga:translate(key: 'all')}" property="measures" id="measures" options="{measures}"/>
+    <f:form.select class="form-control" multiple="true" prependOptionValue="" prependOptionLabel="{f:translate(key: 'all')}" property="measures" id="measures" options="{measures}"/>
 </div>
+</html>

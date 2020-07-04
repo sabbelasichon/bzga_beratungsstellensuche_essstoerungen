@@ -35,9 +35,9 @@ class EntryRepository
     /**
      * @var string
      */
-    const LANGUAGE_MM_TABLE = 'tx_bzgaberatungsstellensuche_entry_language_mm';
+    public const LANGUAGE_MM_TABLE = 'tx_bzgaberatungsstellensuche_entry_language_mm';
 
-    public function truncate()
+    public function truncate(): void
     {
         $this->getDatabaseConnectionForTable(CategoryRepository::TABLE)->truncate(CategoryRepository::TABLE);
         $this->getDatabaseConnectionForTable(CategoryRepository::MM_TABLE)->truncate(CategoryRepository::MM_TABLE);
@@ -59,11 +59,6 @@ class EntryRepository
         $this->getDatabaseConnectionForTable(self::LANGUAGE_MM_TABLE)->truncate(self::LANGUAGE_MM_TABLE);
     }
 
-    /**
-     * @param string $table
-     *
-     * @return Connection
-     */
     protected function getDatabaseConnectionForTable(string $table): Connection
     {
         return GeneralUtility::makeInstance(ConnectionPool::class)

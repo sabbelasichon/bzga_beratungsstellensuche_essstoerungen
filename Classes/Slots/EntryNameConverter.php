@@ -20,11 +20,6 @@ namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Slots;
  */
 class EntryNameConverter
 {
-
-    /**
-     * @param array $mapNames
-     * @return array
-     */
     public function mapNames(array $mapNames = []): array
     {
         $mapNames = array_merge($mapNames, [

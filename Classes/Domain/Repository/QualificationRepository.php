@@ -24,10 +24,10 @@ class QualificationRepository extends AbstractBaseRepository
     /**
      * @var string
      */
-    const TABLE = 'tx_bzgaberatungsstellensuche_domain_model_qualification';
+    public const TABLE = 'tx_bzgaberatungsstellensuche_domain_model_qualification';
 
     /**
      * @var string
      */
-    const MM_TABLE = 'tx_bzgaberatungsstellensuche_entry_qualification_mm';
+    public const MM_TABLE = 'tx_bzgaberatungsstellensuche_entry_qualification_mm';
 }

@@ -24,5 +24,5 @@ class TypeRepository extends AbstractBaseRepository
     /**
      * @var string
      */
-    const TABLE = 'tx_bzgaberatungsstellensuche_domain_model_type';
+    public const TABLE = 'tx_bzgaberatungsstellensuche_domain_model_type';
 }
