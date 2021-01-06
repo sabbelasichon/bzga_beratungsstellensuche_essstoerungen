@@ -1,30 +1,26 @@
 <?php
 
-namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Tests\Functional\Service\Importer;
-
 /*
- * This file is part of the TYPO3 CMS project.
- *
- * It is free software; you can redistribute it and/or modify it under
- * the terms of the GNU General Public License, either version 2
- * of the License, or any later version.
+ * This file is part of the "bzga_beratungsstellensuche_essstoerungen" Extension for TYPO3 CMS.
  *
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
- *
- * The TYPO3 project - inspiring people to share!
  */
 
+namespace Bzga\BzgaBeratungsstellensucheEssstoerungen\Tests\Functional\Service\Importer;
+
 use Bzga\BzgaBeratungsstellensuche\Service\Importer\XmlImporter;
-use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
+use Bzga\BzgaBeratungsstellensucheEssstoerungen\Tests\Functional\DatabaseTrait;
 use SJBR\StaticInfoTables\Utility\DatabaseUpdateUtility;
 use TYPO3\CMS\Core\Core\Bootstrap;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
 use TYPO3\CMS\Extbase\Object\ObjectManagerInterface;
+use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
 
 class XmlImporterTest extends FunctionalTestCase
 {
+    use DatabaseTrait;
 
     /**
      * @var string
@@ -70,12 +66,12 @@ class XmlImporterTest extends FunctionalTestCase
         parent::setUp();
         $backendUser = $this->setUpBackendUserFromFixture(1);
         $backendUser->workspace = 0;
-        Bootstrap::getInstance()->initializeLanguageObject();
+        Bootstrap::initializeLanguageObject();
         $this->objectManager = GeneralUtility::makeInstance(ObjectManager::class);
         $this->xmlImporter = $this->objectManager->get(XmlImporter::class);
 
-        $this->importDataSet(__DIR__.'/../../Fixtures/pages.xml');
-        $this->importDataSet(__DIR__.'/../../Fixtures/sys_file_storage.xml');
+        $this->importDataSet(__DIR__ . '/../../Fixtures/pages.xml');
+        $this->importDataSet(__DIR__ . '/../../Fixtures/sys_file_storage.xml');
 
         /** @var ObjectManager $objectManager */
         $objectManager = GeneralUtility::makeInstance(ObjectManager::class);
@@ -91,10 +87,10 @@ class XmlImporterTest extends FunctionalTestCase
     {
         $this->xmlImporter->importFromFile('fileadmin/import/beratungsstellen.xml', self::SYS_FOLDER_FOR_ENTRIES);
 
-        $this->assertEquals(3, $this->getDatabaseConnection()->selectCount('*', 'tx_bzgaberatungsstellensuche_domain_model_category'));
-        $this->assertEquals(1, $this->getDatabaseConnection()->selectCount('*', 'tx_bzgaberatungsstellensuche_domain_model_entry'));
-        $this->assertEquals(13, $this->getDatabaseConnection()->selectCount('*', 'tx_bzgaberatungsstellensuche_domain_model_measure'));
-        $this->assertEquals(10, $this->getDatabaseConnection()->selectCount('*', 'tx_bzgaberatungsstellensuche_entry_measure_mm'));
+        self::assertEquals(3, $this->selectCount('*', 'tx_bzgaberatungsstellensuche_domain_model_category'));
+        self::assertEquals(1, $this->selectCount('*', 'tx_bzgaberatungsstellensuche_domain_model_entry'));
+        self::assertEquals(13, $this->selectCount('*', 'tx_bzgaberatungsstellensuche_domain_model_measure'));
+        self::assertEquals(10, $this->selectCount('*', 'tx_bzgaberatungsstellensuche_entry_measure_mm'));
     }
 
     /**
@@ -102,7 +98,7 @@ class XmlImporterTest extends FunctionalTestCase
      */
     public function externalIdForStaticLanguagesCorrectlySet(): void
     {
-        $this->assertEquals(6, $this->getDatabaseConnection()->selectCount('*', 'static_languages', 'external_id > 0'));
+        self::assertEquals(6, $this->selectCount('*', 'static_languages', 'external_id > 0'));
     }
 
     public function tearDown(): void

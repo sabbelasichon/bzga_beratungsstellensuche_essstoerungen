@@ -1,6 +1,5 @@
 <?php
 
-
 if (! defined('TYPO3_MODE')) {
     die('Access denied.');
 }
@@ -85,4 +84,7 @@ call_user_func(function ($packageKey) {
         ],
     ];
     \Bzga\BzgaBeratungsstellensuche\Utility\ExtensionManagementUtility::addAdditionalFormFields($fields);
+
+    // Upgrade wizards
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][\Bzga\BzgaBeratungsstellensucheEssstoerungen\Updates\ImportLanguagesUpdate::class] = \Bzga\BzgaBeratungsstellensucheEssstoerungen\Updates\ImportLanguagesUpdate::class;
 }, 'bzga_beratungsstellensuche_essstoerungen');
