@@ -2,8 +2,4 @@
 phpunit.xml
 .Build
 composer.lock
-ToDo.txt
-docker-compose.yml
-functional.sh
-config
-var
+.phpunit.result.cache

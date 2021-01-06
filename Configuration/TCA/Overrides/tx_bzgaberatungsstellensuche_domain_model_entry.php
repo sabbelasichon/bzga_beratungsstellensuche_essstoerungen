@@ -1,10 +1,17 @@
 <?php
 
+/*
+ * This file is part of the "bzga_beratungsstellensuche_essstoerungen" Extension for TYPO3 CMS.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE.txt file that was distributed with this source code.
+ */
+
 defined('TYPO3_MODE') || die('Access denied.');
 
 $fields = [
     'targetgroups' => [
-        'exclude' => 0,
+        'exclude' => false,
         'label' => 'LLL:EXT:bzga_beratungsstellensuche_essstoerungen/Resources/Private/Language/locallang_db.xlf:tx_bzgaberatungsstellensuche_domain_model_entry.targetgroups',
         'config' => [
             'type' => 'select',
@@ -21,10 +28,11 @@ $fields = [
                 '_PADDING' => 0,
                 '_VERTICAL' => 1,
             ],
+            'default' => 0,
         ],
     ],
     'measures' => [
-        'exclude' => 0,
+        'exclude' => false,
         'label' => 'LLL:EXT:bzga_beratungsstellensuche_essstoerungen/Resources/Private/Language/locallang_db.xlf:tx_bzgaberatungsstellensuche_domain_model_entry.measures',
         'config' => [
             'type' => 'select',
@@ -41,10 +49,11 @@ $fields = [
                 '_PADDING' => 0,
                 '_VERTICAL' => 1,
             ],
+            'default' => 0,
         ],
     ],
     'experts' => [
-        'exclude' => 0,
+        'exclude' => false,
         'label' => 'LLL:EXT:bzga_beratungsstellensuche_essstoerungen/Resources/Private/Language/locallang_db.xlf:tx_bzgaberatungsstellensuche_domain_model_entry.experts',
         'config' => [
             'type' => 'select',
@@ -61,10 +70,11 @@ $fields = [
                 '_PADDING' => 0,
                 '_VERTICAL' => 1,
             ],
+            'default' => 0,
         ],
     ],
     'qualifications' => [
-        'exclude' => 0,
+        'exclude' => false,
         'label' => 'LLL:EXT:bzga_beratungsstellensuche_essstoerungen/Resources/Private/Language/locallang_db.xlf:tx_bzgaberatungsstellensuche_domain_model_entry.qualifications',
         'config' => [
             'type' => 'select',
@@ -81,10 +91,11 @@ $fields = [
                 '_PADDING' => 0,
                 '_VERTICAL' => 1,
             ],
+            'default' => 0,
         ],
     ],
     'categories_extended' => [
-        'exclude' => 0,
+        'exclude' => false,
         'label' => 'LLL:EXT:bzga_beratungsstellensuche_essstoerungen/Resources/Private/Language/locallang_db.xlf:tx_bzgaberatungsstellensuche_domain_model_category_extended',
         'config' => [
             'type' => 'select',
@@ -101,10 +112,11 @@ $fields = [
                 '_PADDING' => 0,
                 '_VERTICAL' => 1,
             ],
+            'default' => 0,
         ],
     ],
     'languages' => [
-        'exclude' => 0,
+        'exclude' => false,
         'label' => 'LLL:EXT:bzga_beratungsstellensuche_essstoerungen/Resources/Private/Language/locallang_db.xlf:tx_bzgaberatungsstellensuche_domain_model_entry.languages',
         'config' => [
             'type' => 'select',
@@ -120,10 +132,11 @@ $fields = [
                 '_PADDING' => 0,
                 '_VERTICAL' => 1,
             ],
+            'default' => 0,
         ],
     ],
     'category_extended_other' => [
-        'exclude' => 0,
+        'exclude' => false,
         'label' => 'LLL:EXT:bzga_beratungsstellensuche_essstoerungen/Resources/Private/Language/locallang_db.xlf:tx_bzgaberatungsstellensuche_domain_model_entry.category_extended_other',
         'config' => [
             'type' => 'input',
@@ -132,7 +145,7 @@ $fields = [
         ],
     ],
     'language_other' => [
-        'exclude' => 0,
+        'exclude' => false,
         'label' => 'LLL:EXT:bzga_beratungsstellensuche_essstoerungen/Resources/Private/Language/locallang_db.xlf:tx_bzgaberatungsstellensuche_domain_model_entry.language_other',
         'config' => [
             'type' => 'input',
@@ -141,7 +154,7 @@ $fields = [
         ],
     ],
     'targetgroup_other' => [
-        'exclude' => 0,
+        'exclude' => false,
         'label' => 'LLL:EXT:bzga_beratungsstellensuche_essstoerungen/Resources/Private/Language/locallang_db.xlf:tx_bzgaberatungsstellensuche_domain_model_entry.targetgroup_other',
         'config' => [
             'type' => 'input',
@@ -150,7 +163,7 @@ $fields = [
         ],
     ],
     'measure_other' => [
-        'exclude' => 0,
+        'exclude' => false,
         'label' => 'LLL:EXT:bzga_beratungsstellensuche_essstoerungen/Resources/Private/Language/locallang_db.xlf:tx_bzgaberatungsstellensuche_domain_model_entry.measure_other',
         'config' => [
             'type' => 'input',
@@ -159,7 +172,7 @@ $fields = [
         ],
     ],
     'institution_type' => [
-        'exclude' => 0,
+        'exclude' => false,
         'label' => 'LLL:EXT:bzga_beratungsstellensuche_essstoerungen/Resources/Private/Language/locallang_db.xlf:tx_bzgaberatungsstellensuche_domain_model_type',
         'config' => [
             'type' => 'select',
@@ -170,6 +183,7 @@ $fields = [
             'foreign_table' => 'tx_bzgaberatungsstellensuche_domain_model_type',
             'minitems' => 0,
             'maxitems' => 1,
+            'default' => 0,
         ],
     ],
 ];
