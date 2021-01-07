@@ -52,7 +52,7 @@ class XmlImporterTest extends FunctionalTestCase
     /**
      * @var array
      */
-    protected $testExtensionsToLoad = ['typo3conf/ext/bzga_beratungsstellensuche_essstoerungen', 'typo3conf/ext/bzga_beratungsstellensuche', 'typo3conf/ext/static_info_tables', 'typo3conf/ext/static_info_tables_de'];
+    protected $testExtensionsToLoad = ['typo3conf/ext/static_info_tables', 'typo3conf/ext/static_info_tables_de', 'typo3conf/ext/bzga_beratungsstellensuche', 'typo3conf/ext/bzga_beratungsstellensuche_essstoerungen'];
 
     /**
      * @var array
@@ -87,10 +87,15 @@ class XmlImporterTest extends FunctionalTestCase
     {
         $this->xmlImporter->importFromFile('fileadmin/import/beratungsstellen.xml', self::SYS_FOLDER_FOR_ENTRIES);
 
+        foreach ($this->xmlImporter as $value) {
+            $this->xmlImporter->importEntry($value);
+        }
+        $this->xmlImporter->persist();
+
         self::assertEquals(3, $this->selectCount('*', 'tx_bzgaberatungsstellensuche_domain_model_category'));
-        self::assertEquals(1, $this->selectCount('*', 'tx_bzgaberatungsstellensuche_domain_model_entry'));
         self::assertEquals(13, $this->selectCount('*', 'tx_bzgaberatungsstellensuche_domain_model_measure'));
         self::assertEquals(10, $this->selectCount('*', 'tx_bzgaberatungsstellensuche_entry_measure_mm'));
+        self::assertEquals(1, $this->selectCount('*', 'tx_bzgaberatungsstellensuche_domain_model_entry'));
     }
 
     /**
