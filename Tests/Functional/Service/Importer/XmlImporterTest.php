@@ -92,9 +92,9 @@ class XmlImporterTest extends FunctionalTestCase
         }
         $this->xmlImporter->persist();
 
-        self::assertEquals(3, $this->selectCount('*', 'tx_bzgaberatungsstellensuche_domain_model_category'));
-        self::assertEquals(13, $this->selectCount('*', 'tx_bzgaberatungsstellensuche_domain_model_measure'));
-        self::assertEquals(10, $this->selectCount('*', 'tx_bzgaberatungsstellensuche_entry_measure_mm'));
+        self::assertEquals(9, $this->selectCount('*', 'tx_bzgaberatungsstellensuche_domain_model_category'));
+        self::assertEquals(0, $this->selectCount('*', 'tx_bzgaberatungsstellensuche_domain_model_measure'));
+        self::assertEquals(0, $this->selectCount('*', 'tx_bzgaberatungsstellensuche_entry_measure_mm'));
         self::assertEquals(1, $this->selectCount('*', 'tx_bzgaberatungsstellensuche_domain_model_entry'));
     }
 
